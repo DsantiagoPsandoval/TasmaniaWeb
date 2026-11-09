@@ -64,14 +64,16 @@
             </a>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center gap-8">
+            <nav class="hidden md:flex items-center gap-7">
                 <a href="#inicio" class="text-sm font-medium hover:text-brand-orange transition-colors">Inicio</a>
                 <a href="#nosotros" class="text-sm font-medium hover:text-brand-orange transition-colors">Nosotros</a>
                 <a href="#servicios" class="text-sm font-medium hover:text-brand-orange transition-colors">Servicios</a>
-                <a href="#portafolio" class="text-sm font-medium hover:text-brand-orange transition-colors">Portafolio</a>
+                <a href="#portafolio" class="text-sm font-medium hover:text-brand-orange transition-colors">Historias & Rodajes</a>
+                <a href="#colaboraciones" class="text-sm font-medium hover:text-brand-orange transition-colors">Colaboraciones</a>
                 <a href="#cotizador" class="text-sm font-medium hover:text-brand-orange transition-colors">Cotizador</a>
                 <a href="#plus" class="text-sm font-medium hover:text-brand-orange transition-colors">Diferencial</a>
                 <a href="presentacion.html" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors border border-brand-orange/40 bg-brand-orange/10 px-3 py-1 rounded-full"><i class="fa-solid fa-cube text-xs mr-1"></i> Presentación 3D</a>
+                <a href="filmina_presentacion.html" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors border border-brand-orange/40 bg-brand-orange/10 px-3 py-1 rounded-full"><i class="fa-solid fa-chalkboard-user text-xs mr-1"></i> Filmina Pitch</a>
                 
                 <!-- Ambient Audio Equalizer Button -->
                 <button id="ambient-toggle" class="flex items-center justify-center gap-2 px-3 py-1.5 border border-brand-greyDark/50 rounded-full hover:border-brand-orange text-brand-greyLight hover:text-brand-orange transition-all text-xs font-semibold" title="Activar/Desactivar Música Ambiental">
@@ -104,8 +106,12 @@
                 <a href="#inicio" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Inicio</a>
                 <a href="#nosotros" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Nosotros</a>
                 <a href="#servicios" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Servicios</a>
-                <a href="#portafolio" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Portafolio</a>
+                <a href="#portafolio" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Historias & Rodajes</a>
+                <a href="#colaboraciones" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Colaboraciones</a>
+                <a href="#cotizador" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Cotizador</a>
                 <a href="#plus" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Diferencial</a>
+                <a href="presentacion.html" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20 text-brand-orange"><i class="fa-solid fa-cube text-xs mr-2"></i>Presentación 3D</a>
+                <a href="filmina_presentacion.html" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20 text-brand-orange"><i class="fa-solid fa-chalkboard-user text-xs mr-2"></i>Filmina Pitch</a>
                 <a href="#contacto" class="mt-4 px-6 py-3 text-center text-sm font-semibold bg-brand-orange text-white rounded hover:bg-white hover:text-brand-shadow transition-all duration-300">Contacto</a>
             </nav>
         </div>
@@ -175,6 +181,19 @@
                     <p class="text-brand-greyLight leading-relaxed text-wrap-pretty">
                         Integramos creatividad, producción y capacidad técnica para acompañar cada proyecto de manera integral, desde el desarrollo de la idea original hasta la entrega de la pieza final en pantalla.
                     </p>
+
+                    <!-- Real Photo On Set Showcase -->
+                    <div class="mt-8 rounded-xl overflow-hidden border border-brand-orange/30 relative group shadow-2xl bg-brand-shadow">
+                        <img src="rodaje-calle.jpg" alt="Rodaje en Bogotá Tasmania Films" class="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-brand-shadow/20 to-transparent"></div>
+                        <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-brand-shadow/90 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-brand-greyDark/50">
+                            <span class="text-white font-semibold flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+                                <i class="fa-solid fa-video text-brand-orange"></i> En Set • Bogotá
+                            </span>
+                            <span class="text-brand-orange text-[10px] uppercase font-bold tracking-wider">@tasmania_films</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Interactive Timeline on Right -->
@@ -373,390 +392,828 @@
         </section>
 
 
-        <!-- Portfolio / Showcase Section -->
+        <!-- PARTE 3: Crónicas de Rodaje, Historias de Set y Proyectos Reales -->
         <section id="portafolio" class="py-24 px-6 bg-brand-greyDark/5 border-y border-brand-greyDark/20 relative">
             <div class="max-w-7xl mx-auto">
                 
-                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-16 gap-6">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Proyectos Destacados</span>
-                        <h2 class="text-3xl sm:text-5xl font-black font-heading mt-4 leading-tight text-wrap-balance">
-                            NUESTROS TRABAJOS
-                        </h2>
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
+                        Parte 3 • Detrás del Lente & Experiencias Reales
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading leading-tight text-wrap-balance">
+                        CRÓNICAS DE SET: <span class="text-brand-orange">HISTORIAS Y TRAYECTORIA</span>
+                    </h2>
+                    <p class="text-brand-greyLight mt-4 text-base leading-relaxed text-wrap-pretty">
+                        En Tasmania Films no vendemos simulaciones ni videos de stock. Nuestra identidad se ha forjado en el asfalto de Bogotá, en live sessions íntimas con sonido directo, en tarimas masivas de hip hop y en sets de rodaje independientes con artistas reales. Esta es la historia viva de cómo rodamos.
+                    </p>
+                </div>
+
+                <!-- FEATURE INTERACTIVO: Anatomía de un Rodaje Urbano (Foto Real de Set) -->
+                <div class="mb-24 bg-brand-shadow/90 border border-brand-greyDark/40 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-6 border-b border-brand-greyDark/30 gap-4">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-brand-orange block">Experiencia en Locación • Fotografía Oficial de Set</span>
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white mt-1">Anatomía de un Rodaje Callejero en Bogotá</h3>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-brand-greyLight bg-brand-greyDark/30 px-3.5 py-2 rounded-lg border border-brand-greyDark/40">
+                            <i class="fa-solid fa-hand-pointer text-brand-orange animate-bounce"></i>
+                            <span>Pasa el cursor o haz clic en los números de la foto</span>
+                        </div>
                     </div>
-                    
-                    <!-- Filters Grid -->
-                    <div class="flex flex-wrap gap-3">
-                        <button class="filter-btn active px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-orange bg-brand-orange text-white transition-all duration-300" data-filter="all">Todos</button>
-                        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="videoclip">Videoclips</button>
-                        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="live-session">Live Sessions</button>
-                        <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="reel">Social Reels</button>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <!-- Interactive Photo Canvas -->
+                        <div class="lg:col-span-7 relative rounded-xl overflow-hidden border border-brand-orange/40 shadow-2xl bg-black group select-none">
+                            <img src="rodaje-calle.jpg" alt="Rodaje de Tasmania Films en calles de Bogotá" id="main-shoot-photo" class="w-full h-[420px] sm:h-[500px] object-cover object-center transition-all duration-700 filter contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
+
+                            <!-- Hotspot 1: Iluminación LED Portátil -->
+                            <div class="hotspot-wrapper absolute top-[8%] right-[8%] z-20 cursor-pointer" data-hotspot="1">
+                                <button class="hotspot-pulse w-9 h-9 rounded-full bg-brand-orange text-white font-black text-xs flex items-center justify-center shadow-lg shadow-brand-orange/50 focus:outline-none" aria-label="Ver detalle 1: Iluminación Móvil">
+                                    01
+                                </button>
+                                <div class="hotspot-content absolute top-10 right-0 w-64 bg-brand-shadow/95 border border-brand-orange p-3.5 rounded-xl shadow-2xl backdrop-blur-md text-xs">
+                                    <span class="font-bold text-brand-orange block mb-1">01. Iluminación LED Modular</span>
+                                    <p class="text-brand-greyLight">Equipo de luz portátil montado sobre barra para compensar el contraluz y resaltar texturas en callejones estrechos de Bogotá.</p>
+                                </div>
+                            </div>
+
+                            <!-- Hotspot 2: Cámara & Monitor de Dirección -->
+                            <div class="hotspot-wrapper absolute top-[36%] right-[28%] z-20 cursor-pointer" data-hotspot="2">
+                                <button class="hotspot-pulse w-9 h-9 rounded-full bg-brand-orange text-white font-black text-xs flex items-center justify-center shadow-lg shadow-brand-orange/50 focus:outline-none" aria-label="Ver detalle 2: Monitor de Dirección">
+                                    02
+                                </button>
+                                <div class="hotspot-content absolute top-10 right-0 sm:-right-12 w-64 bg-brand-shadow/95 border border-brand-orange p-3.5 rounded-xl shadow-2xl backdrop-blur-md text-xs">
+                                    <span class="font-bold text-brand-orange block mb-1">02. Cámara & Rig con Monitor</span>
+                                    <p class="text-brand-greyLight">Operación en mano con arnés y monitor externo para encuadres dinámicos de seguimiento al artista en plano secuencia continuo.</p>
+                                </div>
+                            </div>
+
+                            <!-- Hotspot 3: Dirección & Arte Urbano -->
+                            <div class="hotspot-wrapper absolute top-[45%] left-[16%] z-20 cursor-pointer" data-hotspot="3">
+                                <button class="hotspot-pulse w-9 h-9 rounded-full bg-brand-orange text-white font-black text-xs flex items-center justify-center shadow-lg shadow-brand-orange/50 focus:outline-none" aria-label="Ver detalle 3: Dirección de Escena">
+                                    03
+                                </button>
+                                <div class="hotspot-content absolute top-10 left-0 w-64 bg-brand-shadow/95 border border-brand-orange p-3.5 rounded-xl shadow-2xl backdrop-blur-md text-xs">
+                                    <span class="font-bold text-brand-orange block mb-1">03. Dirección & Mural Callejero</span>
+                                    <p class="text-brand-greyLight">Acompañamiento cercano al artista para explotar la energía del mensaje urbano frente a murales auténticos ("...no hay conciencia").</p>
+                                </div>
+                            </div>
+
+                            <!-- Hotspot 4: Audio Directo & Playback -->
+                            <div class="hotspot-wrapper absolute bottom-[18%] left-[22%] z-20 cursor-pointer" data-hotspot="4">
+                                <button class="hotspot-pulse w-9 h-9 rounded-full bg-brand-orange text-white font-black text-xs flex items-center justify-center shadow-lg shadow-brand-orange/50 focus:outline-none" aria-label="Ver detalle 4: Audio en Set">
+                                    04
+                                </button>
+                                <div class="hotspot-content absolute bottom-10 left-0 w-64 bg-brand-shadow/95 border border-brand-orange p-3.5 rounded-xl shadow-2xl backdrop-blur-md text-xs">
+                                    <span class="font-bold text-brand-orange block mb-1">04. Audio en Set & Monitoreo</span>
+                                    <p class="text-brand-greyLight">Monitoreo inalámbrico de sonido y playback para una sincronización labial impecable y registro de ambiente real en campo.</p>
+                                </div>
+                            </div>
+
+                            <span class="absolute bottom-3 right-3 text-[10px] font-mono bg-black/80 text-brand-greyLight px-2.5 py-1 rounded border border-brand-greyDark/50">
+                                <i class="fa-brands fa-instagram text-brand-orange mr-1"></i> @tasmania_films en rodaje
+                            </span>
+                        </div>
+
+                        <!-- Interactive Story Detail Cards for Hotspots -->
+                        <div class="lg:col-span-5 flex flex-col gap-3">
+                            <div class="p-4 rounded-xl bg-brand-greyDark/20 border border-brand-greyDark/40 transition-all cursor-pointer hover:border-brand-orange hotspot-card" data-card="1">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-xs flex items-center justify-center border border-brand-orange/40">01</span>
+                                    <h4 class="text-sm font-bold text-white">Iluminación de Choque en Locación</h4>
+                                </div>
+                                <p class="text-xs text-brand-greyLight leading-relaxed">En los callejones de La Candelaria y barrios de Bogotá, la luz natural cambia en minutos. Empleamos fuentes LED compactas con temperatura controlada para modelar el rostro sin perder la textura del grafiti.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-brand-greyDark/20 border border-brand-greyDark/40 transition-all cursor-pointer hover:border-brand-orange hotspot-card" data-card="2">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-xs flex items-center justify-center border border-brand-orange/40">02</span>
+                                    <h4 class="text-sm font-bold text-white">Cinematografía Guerrilla con Monitor</h4>
+                                </div>
+                                <p class="text-xs text-brand-greyLight leading-relaxed">Operamos rigs estabilizados que permiten movimientos rápidos a ras de suelo y seguimiento a 360 grados, permitiendo al director validar el foco y la composición en tiempo real.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-brand-greyDark/20 border border-brand-greyDark/40 transition-all cursor-pointer hover:border-brand-orange hotspot-card" data-card="3">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-xs flex items-center justify-center border border-brand-orange/40">03</span>
+                                    <h4 class="text-sm font-bold text-white">Conexión Real con la Cultura de Calle</h4>
+                                </div>
+                                <p class="text-xs text-brand-greyLight leading-relaxed">No contratamos figurantes ni usamos escenografías plásticas: dialogamos con los artistas y el entorno local para que la narrativa visual respire autenticidad y mensaje social.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-brand-greyDark/20 border border-brand-greyDark/40 transition-all cursor-pointer hover:border-brand-orange hotspot-card" data-card="4">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-xs flex items-center justify-center border border-brand-orange/40">04</span>
+                                    <h4 class="text-sm font-bold text-white">Sonido Directo y Sincronía Precisa</h4>
+                                </div>
+                                <p class="text-xs text-brand-greyLight leading-relaxed">Con receptores portátiles y enlace inalámbrico, garantizamos que el ritmo corporal del artista y la pista musical coincidan al milisegundo para la edición final.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Portfolio Grid -->
-                <!-- ========================================================================= -->
-                <!-- GUÍA DE REEMPLAZO DE VIDEOS: -->
-                <!-- Para cambiar los videos demo por tus producciones reales: -->
-                <!-- 1. En data-video-id="..." pon el ID de tu video de YouTube (ej. 2a84zgoJvxo). -->
-                <!-- 2. En <source src="..."> pon la URL de tu video MP4 de vista previa. -->
-                <!-- ========================================================================= -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-                    
-                    <!-- Item 1 - ROHO (Jony Roy) [VIDEO DEMO 1] -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="live-session" data-video-id="2a84zgoJvxo">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <!-- Demo Hover Video Preview -->
-                            <video class="portfolio-preview-video absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-80 transition-opacity duration-500" loop muted playsinline>
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-recording-a-music-video-in-a-studio-41549-large.mp4" type="video/mp4">
-                            </video>
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80" alt="ROHO Live Session thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Live Session</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Jony Roy & Miguelacho TF</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">ROHO - Live Session</h3>
-                        </div>
-                    </article>
+                <!-- MÓDULO INTERACTIVO: 4 Historias que Marcaron a Tasmania Films -->
+                <div class="mb-24">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Narrativa & Experiencias</span>
+                        <h3 class="text-2xl sm:text-4xl font-black font-heading mt-2 text-white">
+                            4 HISTORIAS VIVIDAS EN EL SET
+                        </h3>
+                        <p class="text-brand-greyLight text-sm mt-3">Haz clic en cada capítulo para descubrir anécdotas, retos técnicos y cómo se gestó la identidad cinematográfica de cada producción.</p>
+                    </div>
 
-                    <!-- Item 2 - CALETO 13 (Jony Roy) [VIDEO DEMO 2] -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="tLzvM1Pkf-g">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <!-- Demo Hover Video Preview -->
-                            <video class="portfolio-preview-video absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-80 transition-opacity duration-500" loop muted playsinline>
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-singer-singing-into-a-microphone-in-a-studio-41544-large.mp4" type="video/mp4">
-                            </video>
-                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="CALETO 13 Visualizer thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
-                            <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Visualizer</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Jony Roy x Jbd Selektah x DJ Doggie</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">CALETO 13 - Visualizer</h3>
-                        </div>
-                    </article>
+                    <!-- Story Tabs Navigation -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-10" id="story-tabs">
+                        <button class="story-tab-btn active px-5 py-3 rounded-xl border border-brand-orange bg-brand-orange text-white text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2" data-story="1">
+                            <i class="fa-solid fa-fire text-sm"></i> 01. Dancehall & Calle
+                        </button>
+                        <button class="story-tab-btn px-5 py-3 rounded-xl border border-brand-greyDark bg-brand-shadow text-brand-greyLight hover:text-white hover:border-brand-orange text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2" data-story="2">
+                            <i class="fa-solid fa-microphone-lines text-sm"></i> 02. Audio Directo
+                        </button>
+                        <button class="story-tab-btn px-5 py-3 rounded-xl border border-brand-greyDark bg-brand-shadow text-brand-greyLight hover:text-white hover:border-brand-orange text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2" data-story="3">
+                            <i class="fa-solid fa-guitar text-sm"></i> 03. Rock & Conciencia
+                        </button>
+                        <button class="story-tab-btn px-5 py-3 rounded-xl border border-brand-greyDark bg-brand-shadow text-brand-greyLight hover:text-white hover:border-brand-orange text-xs font-bold tracking-wider uppercase transition-all duration-300 flex items-center gap-2" data-story="4">
+                            <i class="fa-solid fa-users-viewfinder text-sm"></i> 04. Tarimas & FMS
+                        </button>
+                    </div>
 
-                    <!-- Item 3 - Lion Bigmao -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="KbIMIE21ZnA">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=80" alt="Lion Bigmao thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
+                    <!-- Story Content Panels -->
+                    <div class="bg-brand-shadow/90 border border-brand-greyDark/50 rounded-2xl p-8 sm:p-12 shadow-2xl relative">
+                        <!-- Panel 1: Jony Roy & Lion Bigmao -->
+                        <div class="story-content-panel active" id="story-panel-1">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                <div class="lg:col-span-7 space-y-4">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">El Despegue del Latin Dancehall</span>
+                                    <h4 class="text-2xl font-black font-heading text-white">JONY ROY & LION BIGMAO: RITMO Y VELOCIDAD</h4>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Cuando comenzamos a colaborar con <strong class="text-white">Jony Roy</strong> en piezas como <em>ROHO</em> y <em>CALETO 13</em>, y con <strong class="text-white">Lion Bigmao</strong> en <em>Ready To Attack</em>, el reto era evidente: el dancehall y el afrobeat exigen una cámara que respire al compás de los graves.
+                                    </p>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Diseñamos planos cerrados con óptica angular para enfatizar la gestualidad de los intérpretes, utilizando contrastes de color saturado e iluminación estroboscópica controlada. Esta serie de rodajes consolidó a Tasmania Films como el referente visual del género en la capital.
+                                    </p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-brand-greyDark/30 text-xs">
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Artistas Clave</span>
+                                            <span class="text-white">Jony Roy & Lion Bigmao</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Obras Destacadas</span>
+                                            <span class="text-white">ROHO, Ready To Attack</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Estética</span>
+                                            <span class="text-white">Angular 24mm • Ritmo Cortado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 bg-brand-greyDark/20 p-6 rounded-xl border border-brand-greyDark/40 space-y-3 text-xs">
+                                    <h5 class="font-bold text-white uppercase tracking-wider text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-quote-left text-brand-orange"></i> Anécdota de Set
+                                    </h5>
+                                    <p class="text-brand-greyLight italic leading-relaxed">
+                                        "Durante el rodaje de Ready To Attack, cambiamos tres veces de locación en menos de cuatro horas entre sótanos y azoteas de Bogotá. La agilidad del equipo de dos cámaras permitió capturar tomas imprevistas de baile y estilo libre que terminaron siendo el clímax del corte final."
+                                    </p>
+                                    <span class="block text-[11px] text-brand-orange font-mono">— Bitácora de Producción, Tasmania Films</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Lion Bigmao</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Ready To Attack</h3>
-                        </div>
-                    </article>
 
-                    <!-- Item 4 - DONEXPRS -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="zCjBs8S7wc8">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="DONEXPRS thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
+                        <!-- Panel 2: Audio Directo -->
+                        <div class="story-content-panel" id="story-panel-2">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                <div class="lg:col-span-7 space-y-4">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">La Mística de la Toma Única</span>
+                                    <h4 class="text-2xl font-black font-heading text-white">AUDIO DIRECTO: RAP Y VERDAD SIN CORTES</h4>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Las live sessions con <strong class="text-white">Audio Directo</strong> (como <em>La Última Vez</em> con Jery & Diken Mc, y <em>Realidades</em> con Nino Freestyle) rompieron el paradigma del videoclip tradicional. En una sesión en vivo no hay segundas oportunidades: el audio se graba en tiempo real junto con la cámara.
+                                    </p>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Implementamos esquemas de iluminación intimista y movimientos fluidos de travelling circular que respetaban el espacio del rapero, logrando una atmósfera cinematográfica donde la rima y la mirada del artista son los verdaderos protagonistas.
+                                    </p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-brand-greyDark/30 text-xs">
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Formato</span>
+                                            <span class="text-white">Live Session Multicámara</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Artistas</span>
+                                            <span class="text-white">Jery, Diken Mc, Nino Freestyle</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Reto Mayor</span>
+                                            <span class="text-white">Toma Continua • Cero Cortes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 bg-brand-greyDark/20 p-6 rounded-xl border border-brand-greyDark/40 space-y-3 text-xs">
+                                    <h5 class="font-bold text-white uppercase tracking-wider text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-quote-left text-brand-orange"></i> Anécdota de Set
+                                    </h5>
+                                    <p class="text-brand-greyLight italic leading-relaxed">
+                                        "Grabar a Nino Freestyle en una sola toma requirió ensayar la trayectoria de la cámara tres veces antes de tocar el REC. Cuando empezó a rapear sobre las realidades del barrio, el set entero quedó en silencio absoluto; esa energía cruda no se puede fingir en postproducción."
+                                    </p>
+                                    <span class="block text-[11px] text-brand-orange font-mono">— Bitácora de Producción, Tasmania Films</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">DONEXPRS (Mambo Rap)</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">STREET LIGHT</h3>
-                        </div>
-                    </article>
 
-                    <!-- Item 5 - Audio Directo - Jery & Diken Mc -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="live-session" data-video-id="y2fiRb2AgRk">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Jery & Diken Mc thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Audio Directo</span>
+                        <!-- Panel 3: Sonidosis -->
+                        <div class="story-content-panel" id="story-panel-3">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                <div class="lg:col-span-7 space-y-4">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Rock Fusión y Memoria Popular</span>
+                                    <h4 class="text-2xl font-black font-heading text-white">SONIDOSIS: VENCEREMOS Y HOMENAJE A JULIO JARAMILLO</h4>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Con la banda de rock <strong class="text-white">Sonidosis</strong> abordamos un lenguaje más visceral y de crítica social. En <em>Venceremos</em> y el <em>Rock Ruiseñor</em> (homenaje a Julio Jaramillo), la paleta de color se trasladó hacia sombras profundas, humo denso y tonos cobrizos.
+                                    </p>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        El tratamiento visual exploró la fusión entre la música de cantina popular y la potencia del rock alternativo colombiano, generando piezas visuales que transmiten identidad histórica, denuncia y dignidad comunitaria.
+                                    </p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-brand-greyDark/30 text-xs">
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Agrupación</span>
+                                            <span class="text-white">Sonidosis (Rock Fusión)</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Obras</span>
+                                            <span class="text-white">Venceremos, Rock Ruiseñor</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Atmósfera</span>
+                                            <span class="text-white">Contrastes Altos • Look 35mm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 bg-brand-greyDark/20 p-6 rounded-xl border border-brand-greyDark/40 space-y-3 text-xs">
+                                    <h5 class="font-bold text-white uppercase tracking-wider text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-quote-left text-brand-orange"></i> Anécdota de Set
+                                    </h5>
+                                    <p class="text-brand-greyLight italic leading-relaxed">
+                                        "Para el homenaje a Julio Jaramillo, filmamos en un antiguo teatro con iluminación cenital. La combinación de guitarras distorsionadas con la lírica del pasillo ecuatoriano creó una resonancia acústica que obligó a replantear todos los tiros de cámara para enfocarnos en los instrumentos en primer plano."
+                                    </p>
+                                    <span class="block text-[11px] text-brand-orange font-mono">— Bitácora de Producción, Tasmania Films</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Jery & Diken Mc</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">La Ultima Vez - Live Session</h3>
-                        </div>
-                    </article>
 
-                    <!-- Item 6 - Audio Directo - Nino Freestyle -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="live-session" data-video-id="r0m4sF9dSfk">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop&q=80" alt="Nino Freestyle thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Audio Directo</span>
+                        <!-- Panel 4: FMS Colombia & Órale Güey Fest -->
+                        <div class="story-content-panel" id="story-panel-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                <div class="lg:col-span-7 space-y-4">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Grandes Escenarios y Multitudes</span>
+                                    <h4 class="text-2xl font-black font-heading text-white">FMS COLOMBIA & ÓRALE GÜEY FEST: COBERTURAS MASIVAS</h4>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        El reto de eventos de gran escala como la <strong class="text-white">Freestyle Master Series (FMS Colombia)</strong> y el <strong class="text-white">Órale Güey Fest</strong> radica en la velocidad. En cuestión de minutos se producen rimas históricas que deben ser capturadas, editadas y publicadas con calidad cinematográfica.
+                                    </p>
+                                    <p class="text-sm text-brand-greyLight leading-relaxed">
+                                        Desplegamos equipos con lentes teleobjetivo para captar las reacciones del jurado y del público, sumados a cámaras estabilizadas al pie de tarima que atrapan la tensión de cada minuto libre.
+                                    </p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-brand-greyDark/30 text-xs">
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Plataformas</span>
+                                            <span class="text-white">FMS Colombia & Órale Güey</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Formato</span>
+                                            <span class="text-white">Reels • Aftermovie • Backstage</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-brand-orange font-bold block">Tiempo de Entrega</span>
+                                            <span class="text-white">Cápsulas en Tiempo Real</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 bg-brand-greyDark/20 p-6 rounded-xl border border-brand-greyDark/40 space-y-3 text-xs">
+                                    <h5 class="font-bold text-white uppercase tracking-wider text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-quote-left text-brand-orange"></i> Anécdota de Set
+                                    </h5>
+                                    <p class="text-brand-greyLight italic leading-relaxed">
+                                        "Entre el rugido de 5.000 personas en la FMS, el cámara principal tuvo que esquivar a los participantes que saltaban por la tarima para mantener el encuadre en plano holandés. Es adrenalina pura: no hay guion, la intuición cinematográfica lo es todo."
+                                    </p>
+                                    <span class="block text-[11px] text-brand-orange font-mono">— Bitácora de Producción, Tasmania Films</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Nino Freestyle</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Realidades - Live Session</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 7 - Kiño Music -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="yYaLInLhZs0">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&auto=format&fit=crop&q=80" alt="Kiño music thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Kiño x Tommy Navia</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Sale El Sol</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 8 - Los de la piña -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="VEGfiwVOF6M">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Los de la piña thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Los de la piña</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Que Calor (After Party)</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 9 - Sonora Extrema 1 -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="NvZvGf704oQ">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&auto=format&fit=crop&q=80" alt="Sonora extrema thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Visualizer</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Sonora Extrema</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Te Llevaste Mi Corazón</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 10 - Sonora Extrema 2 -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="V3u9-IOy1Ys">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&auto=format&fit=crop&q=80" alt="Sonora Extrema Tiempos Cambian thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Sonora Extrema - Diego Loudness</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Los Tiempos Cambian</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 11 - Sonidosis 1 -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="zjTuIkgaIu0">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1487180142328-054b783fc471?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Rock Ruiseñor thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Video Oficial</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Sonidosis</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Rock Ruiseñor</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 12 - Sonidosis 2 -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="videoclip" data-video-id="IDUv6Ilt-OI">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Venceremos thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-solid fa-play text-lg ml-1"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Video Oficial</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Sonidosis</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Venceremos</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 13 - Afaz Natural (Instagram) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DZyVpw6NkdZ/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=80" alt="Afaz Natural reel thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Afaz Natural</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Sesión Especial</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 14 - Bendito Vice (Instagram 1) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DXuaPV3EVt_/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&auto=format&fit=crop&q=80" alt="Bendito Vice reel thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Bendito Vice</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Afro Vice I</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 15 - Bendito Vice (Instagram 2) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DGl52KXot9E/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop&q=80" alt="Bendito Vice reel 2 thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Bendito Vice</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Afro Vice II</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 16 - Eminence (Instagram 1) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/reel/Dbn3H08REYy/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Eminence reel thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Eminence (Luiste La Voz)</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Detrás de Escena I</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 17 - Eminence (Instagram 2) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/p/DZiH8BAkTdi/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=600&auto=format&fit=crop&q=80" alt="Eminence post thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Post</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Eminence (Luiste La Voz)</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Promoción Oficial</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 18 - Orale Wey Fest (Instagram) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/p/DXP6Juaj3uR/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop&q=80" alt="Orale wey Fest thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Festival</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">Orale wey Fest</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Cubrimiento Oficial</h3>
-                        </div>
-                    </article>
-
-                    <!-- Item 19 - FMS Colombia (Instagram) -->
-                    <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer" data-category="reel" data-instagram-url="https://www.instagram.com/p/DXXIz8PkbCO/">
-                        <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="FMS Colombia thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
-                            <span class="absolute inset-0 flex items-center justify-center">
-                                <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                    <i class="fa-brands fa-instagram text-2xl"></i>
-                                </span>
-                            </span>
-                            <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Batalla Freestyle</span>
-                        </div>
-                        <div class="p-6">
-                            <span class="text-xs text-brand-orange font-bold font-heading">FMS Colombia</span>
-                            <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Contenido Exclusivo</h3>
-                        </div>
-                    </article>
-
+                    </div>
                 </div>
+
+                <!-- VITRINA DE PROYECTOS Y OBRAS REALES (SIN VIDEOS INVENTADOS) -->
+                <div>
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12 gap-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Portafolio Certificado</span>
+                            <h3 class="text-2xl sm:text-4xl font-black font-heading mt-2 text-white">
+                                PRODUCCIONES Y CLIENTES REALES
+                            </h3>
+                            <p class="text-xs text-brand-greyLight mt-1">Obras auténticas realizadas por Tasmania Films. Haz clic en cualquiera para abrir su reproductor o enlace oficial.</p>
+                        </div>
+                        
+                        <!-- Filters Grid -->
+                        <div class="flex flex-wrap gap-2.5">
+                            <button class="filter-btn active px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-orange bg-brand-orange text-white transition-all duration-300" data-filter="all">Todos (16)</button>
+                            <button class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="videoclip">Videoclips</button>
+                            <button class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="live-session">Live Sessions</button>
+                            <button class="filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded border border-brand-greyDark text-brand-greyLight hover:border-brand-orange hover:text-white transition-all duration-300" data-filter="reel">Social Reels</button>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Grid (100% Real Works) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                        
+                        <!-- 1 - ROHO (Jony Roy) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="2a84zgoJvxo">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80" alt="ROHO Live Session" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
+                                <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Live Session</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Jony Roy & Miguelacho TF</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">ROHO - Live Session</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Dirección de Fotografía & Producción</span>
+                            </div>
+                        </article>
+
+                        <!-- 2 - CALETO 13 (Jony Roy) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="tLzvM1Pkf-g">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="CALETO 13 Visualizer" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
+                                <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Visualizer</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Jony Roy x Jbd Selektah x DJ Doggie</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">CALETO 13 - Visualizer</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Latin Dancehall • Producción Audiovisual</span>
+                            </div>
+                        </article>
+
+                        <!-- 3 - Lion Bigmao -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="KbIMIE21ZnA">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=80" alt="Lion Bigmao Ready to Attack" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip Oficial</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Lion Bigmao</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Ready To Attack</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Dirección Integral • Dancehall Urbano</span>
+                            </div>
+                        </article>
+
+                        <!-- 4 - DONEXPRS (Mambo Rap) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zCjBs8S7wc8">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="DONEXPRS Mambo Rap" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip Oficial</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">DONEXPRS (Mambo Rap, Chalice Beats)</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">STREET LIGHT</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Hip Hop Internacional • Producción de Video</span>
+                            </div>
+                        </article>
+
+                        <!-- 5 - Audio Directo - Jery & Diken Mc -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="y2fiRb2AgRk">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Jery & Diken Mc" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Audio Directo</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Jery & Diken Mc</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">La Ultima Vez - Live Session</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Toma Directa • Sonido en Vivo</span>
+                            </div>
+                        </article>
+
+                        <!-- 6 - Audio Directo - Nino Freestyle -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="r0m4sF9dSfk">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop&q=80" alt="Nino Freestyle" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Audio Directo</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Nino Freestyle</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Realidades - Live Session</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Sesión Acústica & Freestyle</span>
+                            </div>
+                        </article>
+
+                        <!-- 7 - Kiño Music -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="yYaLInLhZs0">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&auto=format&fit=crop&q=80" alt="Kiño music" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Kiño x Tommy Navia</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Sale El Sol</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Prod. MCTEMATICO • K Music</span>
+                            </div>
+                        </article>
+
+                        <!-- 8 - Los de la piña (Cacao Records) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="VEGfiwVOF6M">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Los de la piña" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Los de la Piña (Cacao Records)</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Que Calor (After Party)</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Urbano • Dirección y Montaje</span>
+                            </div>
+                        </article>
+
+                        <!-- 9 - Sonora Extrema 1 -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="NvZvGf704oQ">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&auto=format&fit=crop&q=80" alt="Sonora extrema" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Visualizer</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Sonora Extrema</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Te Llevaste Mi Corazón</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Producción Visual & Color</span>
+                            </div>
+                        </article>
+
+                        <!-- 10 - Sonora Extrema 2 -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="V3u9-IOy1Ys">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&auto=format&fit=crop&q=80" alt="Sonora Extrema Tiempos Cambian" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Videoclip</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Sonora Extrema - Diego Loudness</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Los Tiempos Cambian</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Música Independiente • Dirección</span>
+                            </div>
+                        </article>
+
+                        <!-- 11 - Sonidosis 1 (Rock Ruiseñor) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zjTuIkgaIu0">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1487180142328-054b783fc471?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Rock Ruiseñor" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Video Oficial</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Sonidosis</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Rock Ruiseñor (Julio Jaramillo)</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Homenaje • Rock Fusión Nacional</span>
+                            </div>
+                        </article>
+
+                        <!-- 12 - Sonidosis 2 (Venceremos) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="IDUv6Ilt-OI">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Venceremos" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-solid fa-play text-lg ml-1"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Video Oficial</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Sonidosis</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Venceremos</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Conciencia Social • Dirección Cinematográfica</span>
+                            </div>
+                        </article>
+
+                        <!-- 13 - Afaz Natural (Instagram) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DZyVpw6NkdZ/">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=80" alt="Afaz Natural" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-brands fa-instagram text-2xl"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Afaz Natural</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Sesión Especial</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Contenido Social & Lanzamiento</span>
+                            </div>
+                        </article>
+
+                        <!-- 14 - Bendito Vice (Instagram 1) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DXuaPV3EVt_/">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&auto=format&fit=crop&q=80" alt="Bendito Vice Afro Vice" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-brands fa-instagram text-2xl"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Bendito Vice</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Afro Vice I</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Cultura & Moda Urbana</span>
+                            </div>
+                        </article>
+
+                        <!-- 15 - Eminence (Instagram) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/Dbn3H08REYy/">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Eminence Luiste La Voz" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-brands fa-instagram text-2xl"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Instagram Reel</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">Eminence (Luiste La Voz)</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Detrás de Escena</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Producción Musical Urbana</span>
+                            </div>
+                        </article>
+
+                        <!-- 16 - FMS Colombia (Instagram) -->
+                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/p/DXXIz8PkbCO/">
+                            <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="FMS Colombia" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 shadow-brand-orange/40">
+                                        <i class="fa-brands fa-instagram text-2xl"></i>
+                                    </span>
+                                </span>
+                                <span class="absolute top-4 left-4 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded">Batalla Freestyle</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs text-brand-orange font-bold font-heading">FMS Colombia</span>
+                                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-brand-orange transition-colors">Contenido Exclusivo</h4>
+                                <span class="text-[11px] text-brand-greyLight block mt-1">Urban Roosters • Freestyle Master Series</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
+
+        <!-- SECCIÓN: COLABORACIONES & ALIANZAS -->
+        <section id="colaboraciones" class="py-24 px-6 bg-brand-shadow border-b border-brand-greyDark/20 relative">
+            <div class="max-w-7xl mx-auto">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                        Ecosistema Audiovisual
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading mt-2 mb-4 leading-tight text-white">
+                        COLABORACIONES & ALIANZAS
+                    </h2>
+                    <p class="text-brand-greyLight text-sm sm:text-base leading-relaxed text-wrap-pretty">
+                        Artistas, sellos discográficos, festivales masivos y colectivos culturales que han confiado en la mirada cinematográfica y la capacidad de producción de Tasmania Films.
+                    </p>
+                </div>
+
+                <!-- Collaborations Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                    
+                    <!-- Collab 1: FMS Colombia -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">FMS Colombia</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Urban Roosters</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Cobertura audiovisual y piezas exclusivas de la liga profesional de freestyle.</p>
+                    </div>
+
+                    <!-- Collab 2: Órale Güey Fest -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-guitar"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Órale Güey Fest</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Festival Cultural</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Registro de tarima, aftermovie y cubrimiento de experiencias en vivo.</p>
+                    </div>
+
+                    <!-- Collab 3: Mambo Rap -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Mambo Rap</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">DONEXPRS • Chalice Beats</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Producción del videoclip oficial <em>Street Light</em> de alcance internacional.</p>
+                    </div>
+
+                    <!-- Collab 4: Audio Directo -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Audio Directo</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Revolutionary Films</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Dirección de cámaras y estética en vivo para sesiones de rap y acústicos.</p>
+                    </div>
+
+                    <!-- Collab 5: Cacao Records -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-record-vinyl"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Cacao Records</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Sello Independiente</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Producción de videoclips urbanos para artistas como Los de la Piña.</p>
+                    </div>
+
+                    <!-- Collab 6: Alcolirykoz -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Alcolirykoz</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Escena Hip Hop Nacional</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Vínculos de registro y piezas para referentes de la lírica urbana colombiana.</p>
+                    </div>
+
+                    <!-- Collab 7: Kiño Music -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Kiño Music</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">K Music Producciones</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Realización de videoclip oficial <em>Sale El Sol</em> junto a Tommy Navia.</p>
+                    </div>
+
+                    <!-- Collab 8: Open Sound -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Open Sound</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Estudio & Producción</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Alianza técnica para sincronización, mezcla y masterización audiovisual.</p>
+                    </div>
+
+                    <!-- Collab 9: Subterra -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-dungeon"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Subterra</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Colectivo Underground</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Espacio de experimentación sonora y registro visual alternativo.</p>
+                    </div>
+
+                    <!-- Collab 10: Afaz Natural -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-podcast"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Afaz Natural</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Artista Urbano & Reggae</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Contenido especializado para plataformas digitales y reels de alto impacto.</p>
+                    </div>
+
+                    <!-- Collab 11: Bendito Vice -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Bendito Vice</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Afro Vice • Moda Urbana</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Dirección visual para la serie audiovisual de moda y estética afrodiaspórica.</p>
+                    </div>
+
+                    <!-- Collab 12: Sonora Extrema -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Sonora Extrema</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Diego Loudness</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Realización de visualizers y videoclip <em>Los Tiempos Cambian</em>.</p>
+                    </div>
+
+                    <!-- Collab 13: Sonidosis -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-drum"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Sonidosis</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Rock Social Colombiano</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Producción de videoclips oficiales como <em>Venceremos</em> y <em>Rock Ruiseñor</em>.</p>
+                    </div>
+
+                    <!-- Collab 14: Eminence -->
+                    <div class="collab-card bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange rounded-xl p-6 flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-4 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">Eminence</h4>
+                        <span class="text-[11px] text-brand-orange font-mono uppercase mt-1">Luiste La Voz</span>
+                        <p class="text-xs text-brand-greyLight mt-2">Cobertura detrás de cámaras y cápsulas promocionales para redes.</p>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="mt-16 bg-gradient-to-r from-brand-greyDark/30 via-brand-orange/10 to-brand-greyDark/30 border border-brand-orange/30 p-8 sm:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">¿Planeando un proyecto, festival o lanzamiento?</span>
+                        <h3 class="text-xl sm:text-2xl font-black font-heading text-white mt-1">Unamos fuerzas para contar tu historia</h3>
+                        <p class="text-xs text-brand-greyLight mt-1 max-w-xl">Desde la planeación de la idea hasta la entrega en formatos de cine o redes. Diseñamos esquemas de coproducción a tu medida.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#cotizador" class="px-6 py-3 bg-brand-orange text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white hover:text-brand-shadow transition-all shadow-lg shadow-brand-orange/20">
+                            Cotizar Proyecto <i class="fa-solid fa-calculator ml-1"></i>
+                        </a>
+                        <a href="https://wa.me/573219229093" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-brand-greyDark text-white font-bold text-xs uppercase tracking-wider rounded-lg hover:border-brand-orange hover:text-brand-orange transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-green-500 text-sm"></i> WhatsApp Directo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Plus / Differentiator Section -->
         <section id="plus" class="py-24 px-6 max-w-7xl mx-auto relative">
@@ -1037,7 +1494,10 @@
                 <a href="#inicio" class="hover:text-brand-orange transition-colors">Inicio</a>
                 <a href="#nosotros" class="hover:text-brand-orange transition-colors">Nosotros</a>
                 <a href="#servicios" class="hover:text-brand-orange transition-colors">Servicios</a>
-                <a href="#portafolio" class="hover:text-brand-orange transition-colors">Portafolio</a>
+                <a href="#portafolio" class="hover:text-brand-orange transition-colors">Historias & Rodajes</a>
+                <a href="#colaboraciones" class="hover:text-brand-orange transition-colors">Colaboraciones</a>
+                <a href="#cotizador" class="hover:text-brand-orange transition-colors">Cotizador</a>
+                <a href="#contacto" class="hover:text-brand-orange transition-colors">Contacto</a>
             </div>
 
             <!-- Copyright -->
@@ -1055,9 +1515,16 @@
                 &times;
             </button>
             
-            <!-- Video Container -->
-            <div class="aspect-video w-full bg-black" id="lightbox-video-wrapper">
+            <!-- Video Container (YouTube) -->
+            <div class="aspect-video w-full bg-black hidden" id="lightbox-video-wrapper">
                 <iframe id="lightbox-iframe" class="w-full h-full" src="" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video Container (HTML5 MP4 para Eventos y Producciones) -->
+            <div class="aspect-video w-full bg-black hidden flex items-center justify-center" id="lightbox-mp4-wrapper">
+                <video id="lightbox-mp4-video" class="w-full h-full object-contain" controls playsinline preload="auto">
+                    Tu navegador no soporta el formato de video.
+                </video>
             </div>
 
             <!-- Custom Instagram Box -->

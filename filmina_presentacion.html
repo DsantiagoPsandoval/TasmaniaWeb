@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmina de Presentación - Tasmania Films | Fase 1</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF6200',
+                            shadow: '#0D0E11',
+                            card: '#16181F',
+                            border: '#282B36',
+                            greyLight: '#94A3B8',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @page {
+            size: landscape;
+            margin: 0;
+        }
+        @media print {
+            body {
+                background-color: #0D0E11 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .slide-container {
+                box-shadow: none !important;
+                border: none !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                max-width: 100vw !important;
+                max-height: 100vh !important;
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-shadow text-white font-body min-h-screen flex flex-col items-center justify-center p-3 md:p-6 overflow-x-hidden">
+
+    <!-- Top Action Bar (hidden in print) -->
+    <header class="no-print w-full max-w-7xl mb-3 flex items-center justify-between text-xs text-brand-greyLight bg-brand-card/80 border border-brand-border px-4 py-2.5 rounded-xl backdrop-blur-md">
+        <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping"></span>
+            <span class="font-semibold text-white">Sustentación Fase 1 (3-5 min)</span>
+            <span class="hidden sm:inline text-brand-greyLight">• Universidad Libre</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="px-3 py-1 bg-brand-border/60 hover:bg-brand-border text-white rounded transition flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-left text-[10px]"></i> Ver Web
+            </a>
+            <button onclick="toggleFullscreen()" class="px-3 py-1 bg-brand-border/60 hover:bg-brand-border text-white rounded transition flex items-center gap-1.5" title="Modo Pantalla Completa para Proyector">
+                <i class="fa-solid fa-expand text-[10px]"></i> Pantalla Completa
+            </button>
+            <button onclick="window.print()" class="px-3 py-1 bg-brand-orange text-white font-bold rounded hover:bg-orange-600 transition flex items-center gap-1.5">
+                <i class="fa-solid fa-file-pdf text-[10px]"></i> Imprimir / Guardar PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- The 1-Slide Presentation Canvas (16:9 Widescreen aspect) -->
+    <main id="slide" class="slide-container w-full max-w-7xl aspect-[16/9] bg-gradient-to-br from-brand-card via-brand-shadow to-black border border-brand-border/80 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+        
+        <!-- Background Ambient Glow -->
+        <div class="absolute -top-24 -left-24 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-brand-orange/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- 1. Header institucional & Título -->
+        <section class="border-b border-brand-border/60 pb-3 flex flex-col md:flex-row md:items-center justify-between gap-2 z-10">
+            <div>
+                <div class="flex items-center gap-2 text-[11px] font-bold tracking-wider text-brand-orange uppercase">
+                    <span class="bg-brand-orange/15 px-2 py-0.5 rounded border border-brand-orange/30">Universidad Libre</span>
+                    <span class="text-brand-greyLight">• Facultad de Ingeniería / Ciencias Sociales • Fase 1</span>
+                </div>
+                <h1 class="text-lg md:text-xl font-black font-heading tracking-tight mt-1">
+                    Plataforma Web Interactiva y Transmedia: <span class="text-brand-orange">Tasmania Films</span>
+                </h1>
+                <p class="text-xs text-brand-greyLight">Exhibición de alta fidelidad para eventos y captación comercial automatizada</p>
+            </div>
+            <div class="text-right text-[11px] text-brand-greyLight shrink-0">
+                <p><strong class="text-white">Estudiante:</strong> Daniel Hernández Ramos y Equipo</p>
+                <p><strong class="text-white">Docente Asesor:</strong> Mg. Jorge Eduardo Taboada A.</p>
+                <p><strong class="text-white">Entrega:</strong> 23 de agosto de 2026 • e-Libre</p>
+            </div>
+        </section>
+
+        <!-- 2. Body Grid: 4 Core Pillars -->
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-4 my-auto py-2 z-10">
+            
+            <!-- Pillar 1: Problema & Oportunidad -->
+            <article class="bg-brand-shadow/90 border border-brand-border/80 rounded-xl p-3.5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-brand-orange text-xs font-bold font-heading uppercase mb-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>1. Problema Central</h3>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-1.5 leading-relaxed">
+                        <li>• <strong>Compresión de Redes:</strong> Las plataformas convencionales degradan la factura 4K y sonido de eventos.</li>
+                        <li>• <strong>Fricción Comercial:</strong> Cotizaciones manuales lentas que reducen hasta un 40% la captación.</li>
+                        <li>• <strong>Falta de Vitrina Propia:</strong> Escasa diferenciación de aftermovies y cumbres corporativas.</li>
+                    </ul>
+                </div>
+                <div class="mt-2 pt-2 border-t border-brand-border/50 text-[10px] text-brand-greyLight italic">
+                    Referentes: García-Avilés (2022); Scolari (2021).
+                </div>
+            </article>
+
+            <!-- Pillar 2: Objetivos de la Solución -->
+            <article class="bg-brand-shadow/90 border border-brand-border/80 rounded-xl p-3.5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-brand-orange text-xs font-bold font-heading uppercase mb-2">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>2. Objetivos Clave</h3>
+                    </div>
+                    <div class="text-[11px] text-slate-300 space-y-1.5 leading-relaxed">
+                        <p class="font-semibold text-white text-[11.5px]">• General:</p>
+                        <p class="text-[10.5px] text-brand-greyLight">Desarrollar un ecosistema web interactivo y transmedia de exhibición cinematográfica y cotización en tiempo real.</p>
+                        <p class="font-semibold text-white text-[11.5px]">• Específicos:</p>
+                        <p class="text-[10px] text-slate-300">1. Requerimientos visuales y funcionales.<br>2. Arquitectura UI/UX con WebGL 3D.<br>3. Reproductor multiformato y cotizador.<br>4. Pruebas de usabilidad y rendimiento.</p>
+                    </div>
+                </div>
+                <div class="mt-2 pt-2 border-t border-brand-border/50 text-[10px] text-brand-orange font-mono">
+                    Enfoque: UCD & Desarrollo Ágil
+                </div>
+            </article>
+
+            <!-- Pillar 3: Arquitectura y Funcionalidades -->
+            <article class="bg-brand-shadow/90 border border-brand-orange/40 rounded-xl p-3.5 flex flex-col justify-between shadow-lg shadow-brand-orange/5">
+                <div>
+                    <div class="flex items-center gap-2 text-brand-orange text-xs font-bold font-heading uppercase mb-2">
+                        <i class="fa-solid fa-cube"></i>
+                        <h3>3. Innovación Técnica</h3>
+                    </div>
+                    <div class="space-y-1.5 text-[11px]">
+                        <div class="bg-brand-border/40 p-1.5 rounded flex items-center justify-between">
+                            <span class="font-semibold text-white"><i class="fa-solid fa-video mr-1 text-brand-orange text-[10px]"></i> Portafolio Eventos</span>
+                            <span class="text-[9px] bg-brand-orange/20 text-brand-orange px-1.5 py-0.5 rounded">MP4 4K / WebM</span>
+                        </div>
+                        <div class="bg-brand-border/40 p-1.5 rounded flex items-center justify-between">
+                            <span class="font-semibold text-white"><i class="fa-solid fa-vr-cardboard mr-1 text-brand-orange text-[10px]"></i> Canvas 3D Three.js</span>
+                            <span class="text-[9px] bg-brand-orange/20 text-brand-orange px-1.5 py-0.5 rounded">60 FPS WebGL</span>
+                        </div>
+                        <div class="bg-brand-border/40 p-1.5 rounded flex items-center justify-between">
+                            <span class="font-semibold text-white"><i class="fa-solid fa-calculator mr-1 text-brand-orange text-[10px]"></i> Cotizador Smart</span>
+                            <span class="text-[9px] bg-brand-orange/20 text-brand-orange px-1.5 py-0.5 rounded">COP en Vivo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 pt-2 border-t border-brand-border/50 text-[10px] text-slate-300">
+                    Filtros: Eventos, Festivales, Videoclips y Bodas.
+                </div>
+            </article>
+
+            <!-- Pillar 4: Metodología y Estado Actual -->
+            <article class="bg-brand-shadow/90 border border-brand-border/80 rounded-xl p-3.5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 text-brand-orange text-xs font-bold font-heading uppercase mb-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>4. Fases & Avance</h3>
+                    </div>
+                    <div class="space-y-1 text-[10px] text-slate-300">
+                        <div class="flex items-center justify-between">
+                            <span>Fase 1: Diagnóstico & Docs</span>
+                            <span class="text-green-400 font-bold">100% ✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Fase 2: UI/UX & Canvas 3D</span>
+                            <span class="text-green-400 font-bold">100% ✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Fase 3: Videos de Eventos</span>
+                            <span class="text-green-400 font-bold">100% ✓</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Fase 4: Métricas Lighthouse</span>
+                            <span class="text-brand-orange font-bold">En curso</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 pt-2 border-t border-brand-border/50 text-[10px] text-brand-greyLight">
+                    Gantt: 8 semanas de ejecución.
+                </div>
+            </article>
+
+        </section>
+
+        <!-- 3. Bottom Bar: Metrics & Pitch Highlights -->
+        <footer class="border-t border-brand-border/60 pt-3 flex flex-col md:flex-row items-center justify-between gap-3 text-xs z-10">
+            <div class="flex items-center gap-4 text-[11px] text-slate-300">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-brand-orange"></i> Prototipo Web Funcional</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-brand-orange"></i> 6 Producciones de Eventos</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-brand-orange"></i> Lightbox HTML5/YT/IG</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-brand-orange"></i> Cotizador Integrado</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-[10px] font-mono text-brand-greyLight">TASMANIA FILMS © 2026 • BOGOTÁ D.C.</span>
+                <span class="px-2.5 py-1 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-wider rounded">Pitch 3-5 Min</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleFullscreen() {
+            const slide = document.getElementById('slide');
+            if (!document.fullscreenElement) {
+                slide.requestFullscreen().catch(err => {
+                    alert(`Error al activar pantalla completa: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

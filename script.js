@@ -112,18 +112,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Hover Demo Video Playback
-    portfolioItems.forEach(item => {
-        const previewVideo = item.querySelector('.portfolio-preview-video');
-        if (previewVideo) {
-            item.addEventListener('mouseenter', () => {
-                previewVideo.play().catch(() => {});
+    /* --- Interactive Shoot Hotspots & Detail Cards --- */
+    const hotspotWrappers = document.querySelectorAll('.hotspot-wrapper');
+    const hotspotCards = document.querySelectorAll('.hotspot-card');
+    const mainShootPhoto = document.getElementById('main-shoot-photo');
+
+    if (hotspotWrappers.length && hotspotCards.length) {
+        hotspotWrappers.forEach(hw => {
+            hw.addEventListener('mouseenter', () => {
+                const id = hw.getAttribute('data-hotspot');
+                hotspotCards.forEach(c => {
+                    if (c.getAttribute('data-card') === id) {
+                        c.classList.add('border-brand-orange', 'bg-brand-orange/15');
+                    } else {
+                        c.classList.remove('border-brand-orange', 'bg-brand-orange/15');
+                    }
+                });
             });
-            item.addEventListener('mouseleave', () => {
-                previewVideo.pause();
-                previewVideo.currentTime = 0;
+            hw.addEventListener('mouseleave', () => {
+                hotspotCards.forEach(c => c.classList.remove('border-brand-orange', 'bg-brand-orange/15'));
             });
-        }
+        });
+
+        hotspotCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const id = card.getAttribute('data-card');
+                hotspotWrappers.forEach(hw => {
+                    if (hw.getAttribute('data-hotspot') === id) {
+                        hw.classList.add('active');
+                        hw.querySelector('.hotspot-pulse').classList.add('scale-125');
+                    } else {
+                        hw.classList.remove('active');
+                        hw.querySelector('.hotspot-pulse').classList.remove('scale-125');
+                    }
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                hotspotWrappers.forEach(hw => {
+                    hw.classList.remove('active');
+                    hw.querySelector('.hotspot-pulse').classList.remove('scale-125');
+                });
+            });
+        });
+    }
+
+    /* --- Interactive Story Tabs --- */
+    const storyTabs = document.querySelectorAll('.story-tab-btn');
+    const storyPanels = document.querySelectorAll('.story-content-panel');
+
+    storyTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const storyId = tab.getAttribute('data-story');
+
+            storyTabs.forEach(t => {
+                t.classList.remove('active', 'border-brand-orange', 'bg-brand-orange', 'text-white');
+                t.classList.add('border-brand-greyDark', 'bg-brand-shadow', 'text-brand-greyLight');
+            });
+
+            tab.classList.add('active', 'border-brand-orange', 'bg-brand-orange', 'text-white');
+            tab.classList.remove('border-brand-greyDark', 'bg-brand-shadow', 'text-brand-greyLight');
+
+            storyPanels.forEach(p => {
+                if (p.id === `story-panel-${storyId}`) {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                }
+            });
+        });
     });
 
 
@@ -132,24 +188,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = document.getElementById('lightbox-close');
     const iframe = document.getElementById('lightbox-iframe');
     const ytWrapper = document.getElementById('lightbox-video-wrapper');
+    const mp4Wrapper = document.getElementById('lightbox-mp4-wrapper');
+    const mp4Video = document.getElementById('lightbox-mp4-video');
     const igWrapper = document.getElementById('lightbox-instagram-wrapper');
     const igBtn = document.getElementById('lightbox-instagram-btn');
 
     portfolioItems.forEach(item => {
         item.addEventListener('click', () => {
             const videoId = item.getAttribute('data-video-id');
+            const videoMp4 = item.getAttribute('data-video-mp4');
             const instagramUrl = item.getAttribute('data-instagram-url');
 
-            if (videoId) {
-                ytWrapper.classList.remove('hidden');
-                igWrapper.classList.add('hidden');
-                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1`;
-                lightbox.showModal();
+            // Reset wrappers
+            if (ytWrapper) ytWrapper.classList.add('hidden');
+            if (mp4Wrapper) mp4Wrapper.classList.add('hidden');
+            if (igWrapper) igWrapper.classList.add('hidden');
+            if (iframe) iframe.src = '';
+            if (mp4Video) {
+                mp4Video.pause();
+                mp4Video.removeAttribute('src');
+                mp4Video.load();
+            }
+
+            if (videoMp4) {
+                if (mp4Wrapper && mp4Video) {
+                    mp4Wrapper.classList.remove('hidden');
+                    mp4Video.src = videoMp4;
+                    mp4Video.load();
+                    lightbox.showModal();
+                    mp4Video.play().catch(() => {});
+                }
+            } else if (videoId) {
+                if (ytWrapper && iframe) {
+                    ytWrapper.classList.remove('hidden');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&modestbranding=1`;
+                    lightbox.showModal();
+                }
             } else if (instagramUrl) {
-                ytWrapper.classList.add('hidden');
-                igWrapper.classList.remove('hidden');
-                igBtn.href = instagramUrl;
-                lightbox.showModal();
+                if (igWrapper && igBtn) {
+                    igWrapper.classList.remove('hidden');
+                    igBtn.href = instagramUrl;
+                    lightbox.showModal();
+                }
             }
         });
     });
@@ -157,7 +237,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeLightbox = () => {
         if (lightbox && lightbox.open) {
             lightbox.close();
-            iframe.src = '';
+            if (iframe) iframe.src = '';
+            if (mp4Video) {
+                mp4Video.pause();
+                mp4Video.removeAttribute('src');
+                mp4Video.load();
+            }
         }
     };
 
@@ -177,7 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         lightbox.addEventListener('close', () => {
-            iframe.src = '';
+            if (iframe) iframe.src = '';
+            if (mp4Video) {
+                mp4Video.pause();
+                mp4Video.removeAttribute('src');
+                mp4Video.load();
+            }
         });
     }
 

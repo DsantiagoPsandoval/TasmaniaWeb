@@ -290,11 +290,87 @@ input[type="range"]::-webkit-slider-thumb:hover {
   mix-blend-mode: screen;
 }
 
-/* --- Portfolio Hover Preview Videos --- */
-.portfolio-preview-video {
-  pointer-events: none;
-  object-fit: cover;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+/* --- Interactive Photo Hotspots --- */
+.hotspot-pulse {
+  position: relative;
 }
+
+.hotspot-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid var(--color-primary);
+  animation: hotspotWave 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes hotspotWave {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.hotspot-content {
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hotspot-wrapper:hover .hotspot-content,
+.hotspot-wrapper.active .hotspot-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* --- Interactive Story Tabs --- */
+.story-tab-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-tab-btn.active {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 20px -2px rgba(255, 98, 0, 0.4);
+}
+
+.story-content-panel {
+  display: none;
+  animation: fadeInStory 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.story-content-panel.active {
+  display: block;
+}
+
+@keyframes fadeInStory {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Collaboration Cards & Marquee --- */
+.collab-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.collab-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px -5px rgba(255, 98, 0, 0.2);
+}
+
 
 
