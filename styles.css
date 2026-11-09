@@ -374,3 +374,26 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 
 
+
+/* --- High-End Studio Quoter & Interactive Elements --- */
+.camera-tier-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.camera-tier-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 98, 0, 0.7);
+}
+
+.calc-day-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.calc-day-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.addon-chip {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.addon-chip:hover {
+  transform: translateY(-1px);
+}

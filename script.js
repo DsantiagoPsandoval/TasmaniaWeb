@@ -385,52 +385,131 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 8. DYNAMIC UX: Interactive Budget Calculator --- */
+    /* --- 8. LUXURY INTERACTIVE PROJECT CALCULATOR (STUDIO QUOTER V2.6) --- */
     const calcServiceRadios = document.querySelectorAll('input[name="calc-service"]');
+    const calcCameraRadios = document.querySelectorAll('input[name="calc-camera"]');
     const calcDurationInput = document.getElementById('calc-duration');
     const calcDurationVal = document.getElementById('calc-duration-val');
+    const calcDayBtns = document.querySelectorAll('.calc-day-btn');
+    const calcDaysTag = document.getElementById('calc-days-tag');
     const calcAddons = document.querySelectorAll('.calc-addon');
     const calcPriceDisplay = document.getElementById('calc-price-display');
     const calcTransferBtn = document.getElementById('calc-transfer-btn');
+    const calcCopyBtn = document.getElementById('calc-copy-btn');
+    const copyBtnText = document.getElementById('copy-btn-text');
+
+    // Receipt Elements
+    const receiptRefCode = document.getElementById('receipt-ref-code');
+    const receiptServiceName = document.getElementById('receipt-service-name');
+    const receiptCameraName = document.getElementById('receipt-camera-name');
+    const receiptDaysVal = document.getElementById('receipt-days-val');
+    const receiptDurationVal = document.getElementById('receipt-duration-val');
+    const receiptAddonsCount = document.getElementById('receipt-addons-count');
+    const receiptAddonsList = document.getElementById('receipt-addons-list');
+
+    let selectedDaysCount = 1;
 
     if (calcPriceDisplay) {
-        const serviceBasePrices = {
-            videoclip: 1800000,
-            corporativo: 2200000,
-            fotografia: 1200000,
-            eventos: 1500000
+        // Base prices by service
+        const serviceData = {
+            videoclip: { name: 'Videoclip Musical', price: 2400000, formVal: 'videoclips' },
+            corporativo: { name: 'Video Corporativo', price: 2000000, formVal: 'corporativo' },
+            fotografia: { name: 'Fotografía de Marca', price: 1300000, formVal: 'fotografia' },
+            eventos: { name: 'Cubrimiento de Eventos', price: 1700000, formVal: 'eventos' },
+            publicidad: { name: 'Spot Publicitario', price: 2800000, formVal: 'corporativo' },
+            marketing: { name: 'Pack Social Reels', price: 1500000, formVal: 'corporativo' }
         };
+
+        const cameraData = {
+            indie: { name: 'Sony FX Cinema Line (4K S-Log3)', price: 0 },
+            master: { name: 'RED / ARRI Cine Ultra (6K Raw)', price: 1800000 }
+        };
+
+        const daysMultipliers = {
+            1: { label: '1 Jornada (10 Horas)', extra: 0 },
+            2: { label: '2 Jornadas de Rodaje', extra: 1200000 },
+            3: { label: '3 Jornadas de Rodaje', extra: 2200000 },
+            4: { label: '4+ Jornadas (Intensivo)', extra: 3200000 }
+        };
+
+        // Generate dynamic quote ref id
+        const randomRef = 'TF-BOG-2026-X' + Math.floor(10 + Math.random() * 89);
+        if (receiptRefCode) receiptRefCode.textContent = randomRef;
+        const calcRefId = document.getElementById('calc-ref-id');
+        if (calcRefId) calcRefId.textContent = randomRef;
 
         const updateCalculator = () => {
             let total = 0;
 
-            let selectedService = 'videoclip';
+            // 1. Service Type
+            let currentServiceKey = 'videoclip';
             calcServiceRadios.forEach(radio => {
                 const label = radio.closest('.calc-service-option');
                 if (radio.checked) {
-                    selectedService = radio.value;
-                    total += serviceBasePrices[radio.value] || 1800000;
-                    label.classList.add('border-brand-orange', 'bg-brand-orange/10');
-                    label.classList.remove('border-brand-greyDark/50', 'bg-brand-shadow');
-                } else {
+                    currentServiceKey = radio.value;
+                    total += (serviceData[radio.value] ? serviceData[radio.value].price : 2400000);
+                    if (label) {
+                        label.classList.add('border-brand-orange', 'bg-brand-orange/10');
+                        label.classList.remove('border-brand-greyDark/50', 'bg-brand-shadow');
+                    }
+                } else if (label) {
                     label.classList.remove('border-brand-orange', 'bg-brand-orange/10');
                     label.classList.add('border-brand-greyDark/50', 'bg-brand-shadow');
                 }
             });
 
-            const minutes = parseInt(calcDurationInput.value, 10);
-            if (calcDurationVal) calcDurationVal.textContent = `${minutes} ${minutes === 1 ? 'Minuto' : 'Minutos'}`;
-            
-            if (minutes > 1) {
-                total += (minutes - 1) * 150000;
-            }
-
-            calcAddons.forEach(addon => {
-                if (addon.checked) {
-                    total += parseInt(addon.value, 10);
+            // 2. Camera Tier
+            let currentCameraKey = 'indie';
+            calcCameraRadios.forEach(radio => {
+                const card = radio.closest('.camera-tier-card');
+                if (radio.checked) {
+                    currentCameraKey = radio.value;
+                    total += (cameraData[radio.value] ? cameraData[radio.value].price : 0);
+                    if (card) {
+                        card.classList.add('border-brand-orange', 'bg-brand-orange/10');
+                        card.classList.remove('border-brand-greyDark/50', 'bg-brand-shadow');
+                    }
+                } else if (card) {
+                    card.classList.remove('border-brand-orange', 'bg-brand-orange/10');
+                    card.classList.add('border-brand-greyDark/50', 'bg-brand-shadow');
                 }
             });
 
+            // 3. Shooting Days
+            const dayInfo = daysMultipliers[selectedDaysCount] || daysMultipliers[1];
+            total += dayInfo.extra;
+            if (calcDaysTag) calcDaysTag.textContent = dayInfo.label;
+
+            // 4. Duration
+            const minutes = calcDurationInput ? parseInt(calcDurationInput.value, 10) : 3;
+            let durationLabel = `${minutes} ${minutes === 1 ? 'Minuto' : 'Minutos'}`;
+            if (minutes === 1) durationLabel = '30s - 1 Minuto (Reel / Spot)';
+            if (calcDurationVal) calcDurationVal.textContent = durationLabel;
+
+            if (minutes > 3) {
+                total += (minutes - 3) * 150000;
+            }
+
+            // 5. Addons
+            const activeAddonItems = [];
+            calcAddons.forEach(addon => {
+                const chip = addon.closest('.addon-chip');
+                if (addon.checked) {
+                    const price = parseInt(addon.value, 10) || 0;
+                    total += price;
+                    const name = addon.nextElementSibling ? addon.nextElementSibling.textContent.trim() : 'Módulo';
+                    activeAddonItems.push({ name, price });
+                    if (chip) {
+                        chip.classList.add('border-brand-orange', 'bg-brand-orange/10');
+                        chip.classList.remove('border-brand-greyDark/40', 'bg-brand-shadow/80');
+                    }
+                } else if (chip) {
+                    chip.classList.remove('border-brand-orange', 'bg-brand-orange/10');
+                    chip.classList.add('border-brand-greyDark/40', 'bg-brand-shadow/80');
+                }
+            });
+
+            // Format Total COP
             const formattedTotal = new Intl.NumberFormat('es-CO', {
                 style: 'currency',
                 currency: 'COP',
@@ -438,24 +517,81 @@ document.addEventListener('DOMContentLoaded', () => {
             }).format(total);
 
             calcPriceDisplay.textContent = `${formattedTotal} COP`;
+
+            // Update Receipt Panel
+            if (receiptServiceName) {
+                receiptServiceName.textContent = serviceData[currentServiceKey] ? serviceData[currentServiceKey].name : currentServiceKey;
+            }
+            if (receiptCameraName) {
+                receiptCameraName.textContent = cameraData[currentCameraKey] ? cameraData[currentCameraKey].name : currentCameraKey;
+            }
+            if (receiptDaysVal) {
+                receiptDaysVal.textContent = dayInfo.label;
+            }
+            if (receiptDurationVal) {
+                receiptDurationVal.textContent = durationLabel;
+            }
+            if (receiptAddonsCount) {
+                receiptAddonsCount.textContent = activeAddonItems.length.toString();
+            }
+
+            if (receiptAddonsList) {
+                if (activeAddonItems.length === 0) {
+                    receiptAddonsList.innerHTML = '<div class="text-brand-greyLight/60 italic">Ningún módulo adicional seleccionado</div>';
+                } else {
+                    receiptAddonsList.innerHTML = activeAddonItems.map(item => {
+                        const fmtPrice = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(item.price);
+                        return `<div class="flex justify-between items-center text-white/90">
+                            <span>+ ${item.name}</span>
+                            <span class="text-brand-orange text-[10px]">${fmtPrice}</span>
+                        </div>`;
+                    }).join('');
+                }
+            }
         };
 
+        // Day Selector Button Clicks
+        calcDayBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                calcDayBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-orange', 'text-white', 'border-brand-orange');
+                    b.classList.add('bg-brand-shadow', 'text-brand-greyLight', 'border-brand-greyDark/50');
+                });
+                btn.classList.add('active', 'bg-brand-orange', 'text-white', 'border-brand-orange');
+                btn.classList.remove('bg-brand-shadow', 'text-brand-greyLight', 'border-brand-greyDark/50');
+                selectedDaysCount = parseInt(btn.dataset.days, 10) || 1;
+                updateCalculator();
+            });
+        });
+
         calcServiceRadios.forEach(r => r.addEventListener('change', updateCalculator));
+        calcCameraRadios.forEach(r => r.addEventListener('change', updateCalculator));
         if (calcDurationInput) calcDurationInput.addEventListener('input', updateCalculator);
         calcAddons.forEach(a => a.addEventListener('change', updateCalculator));
 
+        // Initial Calculation
         updateCalculator();
 
+        // Transfer to Contact Form
         if (calcTransferBtn) {
             calcTransferBtn.addEventListener('click', () => {
-                const activeRadio = document.querySelector('input[name="calc-service"]:checked');
-                const serviceVal = activeRadio ? activeRadio.value : 'videoclip';
-                const duration = calcDurationInput.value;
+                const activeServiceRadio = document.querySelector('input[name="calc-service"]:checked');
+                const serviceKey = activeServiceRadio ? activeServiceRadio.value : 'videoclip';
+                const serviceObj = serviceData[serviceKey] || serviceData.videoclip;
+
+                const activeCameraRadio = document.querySelector('input[name="calc-camera"]:checked');
+                const cameraKey = activeCameraRadio ? activeCameraRadio.value : 'indie';
+                const cameraObj = cameraData[cameraKey] || cameraData.indie;
+
+                const duration = calcDurationVal ? calcDurationVal.textContent : '3 Minutos';
+                const dayInfo = daysMultipliers[selectedDaysCount] || daysMultipliers[1];
 
                 const selectedAddonsText = [];
                 calcAddons.forEach(a => {
                     if (a.checked) {
-                        selectedAddonsText.push(a.nextElementSibling.textContent.trim());
+                        const chipLabel = a.closest('label').querySelector('span.text-white');
+                        selectedAddonsText.push(chipLabel ? chipLabel.textContent.trim() : a.id);
                     }
                 });
 
@@ -463,19 +599,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const formServiceSelect = document.getElementById('form-service');
                 if (formServiceSelect) {
-                    if (serviceVal === 'videoclip') formServiceSelect.value = 'videoclips';
-                    else if (serviceVal === 'corporativo') formServiceSelect.value = 'corporativo';
-                    else if (serviceVal === 'fotografia') formServiceSelect.value = 'fotografia';
-                    else if (serviceVal === 'eventos') formServiceSelect.value = 'eventos';
+                    formServiceSelect.value = serviceObj.formVal || 'videoclips';
                 }
 
                 const formMessage = document.getElementById('form-message');
                 if (formMessage) {
-                    formMessage.value = `¡Hola! Me gustaría cotizar un proyecto de tipo ${serviceVal.toUpperCase()}.\n` +
-                        `- Duración estimada: ${duration} minutos\n` +
-                        `- Adicionales: ${selectedAddonsText.length > 0 ? selectedAddonsText.join(', ') : 'Ninguno'}\n` +
-                        `- Estimado aproximado del cotizador: ${priceText}\n\n` +
-                        `Quedo atento a coordinar la propuesta formal.`;
+                    formMessage.value = `¡Hola Tasmania Films! Deseo cotizar y reservar fecha con la siguiente configuración estimada:\n\n` +
+                        `• Referencia de Cotizador: ${randomRef}\n` +
+                        `• Tipo de Proyecto: ${serviceObj.name.toUpperCase()}\n` +
+                        `• Paquete de Cámara: ${cameraObj.name}\n` +
+                        `• Jornadas de Rodaje: ${dayInfo.label}\n` +
+                        `• Duración Estimada de Master: ${duration}\n` +
+                        `• Módulos Adicionales: ${selectedAddonsText.length > 0 ? selectedAddonsText.join(', ') : 'Ninguno seleccionado'}\n` +
+                        `• Estimado Aproximado Total: ${priceText}\n\n` +
+                        `Quedo atento a coordinar la reunión de preproducción y el desglose formal.`;
                 }
 
                 const contactSec = document.getElementById('contacto');
@@ -486,6 +623,53 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (nameInput) nameInput.focus();
                     }, 800);
                 }
+            });
+        }
+
+        // Copy Quote Summary Button
+        if (calcCopyBtn) {
+            calcCopyBtn.addEventListener('click', () => {
+                const activeServiceRadio = document.querySelector('input[name="calc-service"]:checked');
+                const serviceKey = activeServiceRadio ? activeServiceRadio.value : 'videoclip';
+                const serviceObj = serviceData[serviceKey] || serviceData.videoclip;
+                const activeCameraRadio = document.querySelector('input[name="calc-camera"]:checked');
+                const cameraObj = cameraData[activeCameraRadio ? activeCameraRadio.value : 'indie'] || cameraData.indie;
+                const duration = calcDurationVal ? calcDurationVal.textContent : '3 Minutos';
+                const dayInfo = daysMultipliers[selectedDaysCount] || daysMultipliers[1];
+                const priceText = calcPriceDisplay.textContent;
+
+                const selectedAddonsText = [];
+                calcAddons.forEach(a => {
+                    if (a.checked) {
+                        const chipLabel = a.closest('label').querySelector('span.text-white');
+                        selectedAddonsText.push(chipLabel ? chipLabel.textContent.trim() : a.id);
+                    }
+                });
+
+                const summaryText = `🎬 COTIZACIÓN ESTIMADA // TASMANIA FILMS\n` +
+                    `Ref: ${randomRef}\n` +
+                    `• Servicio: ${serviceObj.name}\n` +
+                    `• Cámara: ${cameraObj.name}\n` +
+                    `• Jornadas de Set: ${dayInfo.label}\n` +
+                    `• Duración Master: ${duration}\n` +
+                    `• Adicionales: ${selectedAddonsText.length > 0 ? selectedAddonsText.join(', ') : 'Ninguno'}\n` +
+                    `• Total Estimado: ${priceText}\n\n` +
+                    `Tasmania Films - Bogotá, Colombia\n` +
+                    `Instagram: @tasmania_films`;
+
+                navigator.clipboard.writeText(summaryText).then(() => {
+                    if (copyBtnText) {
+                        const prev = copyBtnText.textContent;
+                        copyBtnText.textContent = '¡Copiado con Éxito al Portapapeles! ✓';
+                        calcCopyBtn.classList.add('border-brand-orange', 'text-brand-orange');
+                        setTimeout(() => {
+                            copyBtnText.textContent = prev;
+                            calcCopyBtn.classList.remove('border-brand-orange', 'text-brand-orange');
+                        }, 2500);
+                    }
+                }).catch(err => {
+                    console.error('Error al copiar:', err);
+                });
             });
         }
     }

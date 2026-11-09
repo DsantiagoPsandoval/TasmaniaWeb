@@ -163,77 +163,226 @@
         </section>
 
 
-        <!-- About Section ("Quiénes somos") -->
+                <!-- About Section ("Quiénes somos") -->
         <section id="nosotros" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-greyDark/20 relative">
-            <div class="absolute top-1/2 left-0 w-72 h-72 bg-brand-orange/5 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
+            <div class="absolute top-1/3 left-0 w-96 h-96 bg-brand-orange/5 rounded-full filter blur-[120px] pointer-events-none -z-10"></div>
+            <div class="absolute bottom-10 right-0 w-80 h-80 bg-brand-orange/5 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Sticky Left Info -->
-                <div class="lg:col-span-5 lg:sticky lg:top-28">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">¿Quiénes somos?</span>
-                    <h2 class="text-3xl sm:text-5xl font-black font-heading mt-4 mb-6 leading-tight text-wrap-balance">
-                        PASIÓN HECHA <br>ESTRUCTURA PROFESIONAL
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-greyDark/30 gap-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                        Identidad y Trayectoria • 2019 - 2026
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading mt-2 leading-tight text-wrap-balance">
+                        PASIÓN HECHA <br><span class="text-brand-orange">ESTRUCTURA PROFESIONAL</span>
                     </h2>
-                    <p class="text-brand-greyLight leading-relaxed mb-8 text-wrap-pretty">
-                        Tasmania Films es una empresa colombiana de producción audiovisual con sede en Bogotá, que nace de un proceso de formación, exploración y consolidación profesional.
+                </div>
+                <div class="max-w-md text-sm text-brand-greyLight">
+                    <p class="leading-relaxed">
+                        No somos una agencia genérica ni intermediarios. Somos una casa productora cinematográfica independiente basada en Bogotá, con visión de autor y capacidad técnica para ejecutar proyectos desde el concepto hasta el máster final en pantalla.
                     </p>
-                    <p class="text-brand-greyLight leading-relaxed text-wrap-pretty">
-                        Integramos creatividad, producción y capacidad técnica para acompañar cada proyecto de manera integral, desde el desarrollo de la idea original hasta la entrega de la pieza final en pantalla.
-                    </p>
+                </div>
+            </div>
 
-                    <!-- Real Photo On Set Showcase -->
-                    <div class="mt-8 rounded-xl overflow-hidden border border-brand-orange/30 relative group shadow-2xl bg-brand-shadow">
-                        <img src="rodaje-calle.jpg" alt="Rodaje en Bogotá Tasmania Films" class="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-brand-shadow/20 to-transparent"></div>
-                        <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-brand-shadow/90 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-brand-greyDark/50">
-                            <span class="text-white font-semibold flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
-                                <i class="fa-solid fa-video text-brand-orange"></i> En Set • Bogotá
+            <!-- Top Grid: Real On-Set Photo Showcase (Dominant) + Narrative & Founders -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch mb-16">
+                
+                <!-- Col 1: Real On-Set Photo Frame (High-End Studio Monitor Style) -->
+                <div class="lg:col-span-6 flex flex-col justify-between bg-brand-shadow border border-brand-orange/40 rounded-2xl overflow-hidden shadow-2xl relative group">
+                    <!-- Monitor Slate Top Header -->
+                    <div class="bg-black/90 px-4 py-3 border-b border-brand-greyDark/40 flex items-center justify-between text-[11px] font-mono">
+                        <div class="flex items-center gap-3">
+                            <span class="flex items-center gap-1.5 text-red-500 font-bold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
+                                REC
                             </span>
-                            <span class="text-brand-orange text-[10px] uppercase font-bold tracking-wider">@tasmania_films</span>
+                            <span class="text-white/80 tracking-wider">00:14:28:18</span>
+                            <span class="text-brand-greyLight hidden sm:inline">| FPS: 24.00</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-brand-orange font-bold text-[10px] tracking-wider uppercase">
+                            <i class="fa-solid fa-film"></i> TASMANIA SET MONITOR
+                        </div>
+                    </div>
+
+                    <!-- Photo Display with Viewfinder Crosshairs & Overlays -->
+                    <div class="relative overflow-hidden bg-black flex-1 min-h-[460px] sm:min-h-[520px] flex items-center justify-center">
+                        <img src="rodaje-calle.jpg" alt="Equipo de Tasmania Films en pleno rodaje urbano en Bogotá" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-black/20 pointer-events-none"></div>
+
+                        <!-- Viewfinder Overlays -->
+                        <div class="absolute top-4 left-4 text-[10px] font-mono text-white/70 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded border border-white/10">
+                            CAM A: SONY CINEMA // S-LOG3
+                        </div>
+                        <div class="absolute top-4 right-4 text-[10px] font-mono text-brand-orange bg-black/60 backdrop-blur-md px-2.5 py-1 rounded border border-brand-orange/30">
+                            ISO 800 • T2.0 • 4K DCI
+                        </div>
+
+                        <!-- Center Focus Crosshair -->
+                        <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-40">
+                            <div class="w-12 h-12 border border-white/50 rounded-full flex items-center justify-center">
+                                <div class="w-1.5 h-1.5 bg-brand-orange rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- On-Image Badge Info -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-brand-shadow/95 backdrop-blur-md p-4 rounded-xl border border-brand-greyDark/50 shadow-xl">
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="text-xs font-bold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-location-dot text-brand-orange"></i> Locación Real: Callejón Urbano, Bogotá D.C.
+                                </span>
+                                <span class="text-[10px] uppercase font-bold text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded border border-brand-orange/20">Set Tasmania</span>
+                            </div>
+                            <p class="text-xs text-brand-greyLight leading-relaxed">
+                                Sebastián Ortiz y el equipo técnico en rodaje en mano con estabilizador y monitoreo inalámbrico. La imagen real que define el compromiso y la presencia de Tasmania Films en cada toma.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Metadata Strip -->
+                    <div class="bg-brand-greyDark/10 px-4 py-3 border-t border-brand-greyDark/30 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="text-[10px] uppercase text-brand-greyLight block font-semibold">Producción</span>
+                            <span class="text-white font-bold text-xs">100% en Set</span>
+                        </div>
+                        <div class="border-x border-brand-greyDark/30">
+                            <span class="text-[10px] uppercase text-brand-greyLight block font-semibold">Equipo Humano</span>
+                            <span class="text-white font-bold text-xs">Técnicos & Artistas</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase text-brand-greyLight block font-semibold">Calidad</span>
+                            <span class="text-brand-orange font-bold text-xs">Master Cine 4K</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Interactive Timeline on Right -->
-                <div class="lg:col-span-7 flex flex-col gap-12 relative pl-8 border-l border-brand-greyDark/50">
+                <!-- Col 2: Narrative, Leadership Profiles & Operational Strengths -->
+                <div class="lg:col-span-6 flex flex-col justify-between gap-6">
                     
-                    <!-- Timeline Point 1 -->
-                    <div class="relative timeline-item transition-all duration-300 hover:translate-x-2">
-                        <!-- Dot -->
-                        <div class="absolute -left-[41px] top-1.5 w-5 h-5 bg-brand-orange rounded-full border-4 border-brand-shadow shadow-md shadow-brand-orange/30"></div>
-                        <span class="text-3xl font-black text-brand-orange/40 font-heading block">2019</span>
-                        <h3 class="text-xl font-bold mt-1 mb-3 text-white">La Semilla Académica</h3>
+                    <!-- Core Narrative Card -->
+                    <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-orange"></span>
+                            Nuestra Esencia y Modelo de Trabajo
+                        </h3>
+                        <p class="text-brand-greyLight text-sm leading-relaxed mb-4 text-wrap-pretty">
+                            Tasmania Films surge de la convicción de que el cine, la música y la publicidad en Colombia merecen un estándar de producción riguroso, accesible y visualmente contundente. No tercerizamos la creatividad: nos involucramos en el guion, el diseño estético, el llamado a set y el etalonaje final.
+                        </p>
                         <p class="text-brand-greyLight text-sm leading-relaxed text-wrap-pretty">
-                            Sebastián Ortiz, a partir de su experiencia universitaria, empieza a transformar los conocimientos teóricos en una visión empresarial concreta. Surge la intención de construir una compañía capaz de desarrollar y producir historias con una mirada propia, más allá del marco académico.
+                            Nos caracterizamos por un flujo de trabajo transparente, donde el cliente y el artista tienen canal directo con la dirección para asegurar coherencia entre la idea conceptual y el resultado final.
                         </p>
                     </div>
 
-                    <!-- Timeline Point 2 -->
-                    <div class="relative timeline-item transition-all duration-300 hover:translate-x-2">
-                        <!-- Dot -->
-                        <div class="absolute -left-[41px] top-1.5 w-5 h-5 bg-brand-orange rounded-full border-4 border-brand-shadow shadow-md shadow-brand-orange/30"></div>
-                        <span class="text-3xl font-black text-brand-orange/40 font-heading block">2020</span>
-                        <h3 class="text-xl font-bold mt-1 mb-3 text-white">Consolidación y Alianza</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed text-wrap-pretty">
-                            Esta visión se fortalece con la llegada de Jhon Barajas. Sebastián y Jhon unen sus conocimientos, experiencia y aspiraciones para darle una estructura sólida al proyecto. Durante los siguientes dos años, definen una identidad basada en la creatividad, el trabajo colaborativo y el compromiso.
+                    <!-- Leadership / Founders Highlight -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Founder 1 -->
+                        <div class="bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange/60 transition-colors p-5 rounded-xl">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange font-bold text-base">
+                                    SO
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Sebastián Ortiz</h4>
+                                    <span class="text-[11px] text-brand-orange font-semibold block">Fundador & Dir. Creativo</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-brand-greyLight leading-relaxed">
+                                Formación audiovisual integral. Lidera la dirección de fotografía, la propuesta estética, el ritmo de montaje y la narrativa visual de cada proyecto.
+                            </p>
+                        </div>
+
+                        <!-- Founder 2 -->
+                        <div class="bg-brand-greyDark/15 border border-brand-greyDark/40 hover:border-brand-orange/60 transition-colors p-5 rounded-xl">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange font-bold text-base">
+                                    JB
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-sm">Jhon Barajas</h4>
+                                    <span class="text-[11px] text-brand-orange font-semibold block">Cofundador & Prod. Ejecutivo</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-brand-greyLight leading-relaxed">
+                                Coordinación logística de rodaje, viabilidad presupuestal, gestión de permisos y alianzas estratégicas con clientes y casas de alquiler en Bogotá.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Operational Strengths (4 Badges) -->
+                    <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-5 rounded-xl">
+                        <span class="text-[11px] uppercase tracking-wider font-bold text-brand-orange block mb-3">Compromisos de Producción</span>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brand-orange mt-0.5"></i>
+                                <span class="text-white font-medium">Equipamiento Cine 4K nativo</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brand-orange mt-0.5"></i>
+                                <span class="text-white font-medium">Flujo Color DaVinci Resolve</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brand-orange mt-0.5"></i>
+                                <span class="text-white font-medium">Sonido directo con monitoreo</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-brand-orange mt-0.5"></i>
+                                <span class="text-white font-medium">Tiempos de entrega garantizados</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Full-width Bottom Timeline Section: 4 Milestones -->
+            <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 sm:p-10 rounded-2xl relative overflow-hidden">
+                <div class="mb-8 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-orange block">Evolución Histórica</span>
+                        <h3 class="text-xl sm:text-2xl font-bold font-heading text-white mt-1">Cómo se forjó Tasmania Films</h3>
+                    </div>
+                    <span class="text-xs text-brand-greyLight hidden sm:block">De la academia a la industria audiovisual</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                    <!-- Milestone 1 -->
+                    <div class="p-5 rounded-xl bg-brand-shadow/60 border border-brand-greyDark/40 hover:border-brand-orange/60 transition-all duration-300">
+                        <span class="text-2xl font-black text-brand-orange/60 font-heading block mb-2">2019</span>
+                        <h4 class="text-white font-bold text-sm mb-2">Semilla Académica</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Sebastián Ortiz inicia la experimentación práctica en entornos universitarios, concibiendo una productora con identidad visual propia.
                         </p>
                     </div>
 
-                    <!-- Timeline Point 3 -->
-                    <div class="relative timeline-item transition-all duration-300 hover:translate-x-2">
-                        <!-- Dot -->
-                        <div class="absolute -left-[41px] top-1.5 w-5 h-5 bg-brand-orange rounded-full border-4 border-brand-shadow shadow-md shadow-brand-orange/30"></div>
-                        <span class="text-3xl font-black text-brand-orange block font-heading">2022</span>
-                        <h3 class="text-xl font-bold mt-1 mb-3 text-brand-orange">Nacimiento Oficial</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed text-wrap-pretty">
-                            Se constituye legal y profesionalmente **Tasmania Films**, enfocada en el desarrollo y producción de contenidos de alta calidad para cine, televisión, publicidad y plataformas digitales. Se establece una metodología integral de producción que cuida desde el guion hasta la postproducción.
+                    <!-- Milestone 2 -->
+                    <div class="p-5 rounded-xl bg-brand-shadow/60 border border-brand-greyDark/40 hover:border-brand-orange/60 transition-all duration-300">
+                        <span class="text-2xl font-black text-brand-orange/60 font-heading block mb-2">2020</span>
+                        <h4 class="text-white font-bold text-sm mb-2">Alianza Creativa</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Se une Jhon Barajas. Se unifican la visión artística de dirección y la disciplina operativa de producción ejecutiva y logística.
+                        </p>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="p-5 rounded-xl bg-brand-shadow/60 border border-brand-greyDark/40 hover:border-brand-orange/60 transition-all duration-300">
+                        <span class="text-2xl font-black text-brand-orange block font-heading mb-2">2022</span>
+                        <h4 class="text-brand-orange font-bold text-sm mb-2">Fundación Oficial</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Constitución legal de Tasmania Films en Bogotá. Inicia la producción formal de videoclips musicales y piezas comerciales.
+                        </p>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="p-5 rounded-xl bg-brand-shadow/60 border border-brand-orange/40 hover:border-brand-orange transition-all duration-300">
+                        <span class="text-2xl font-black text-brand-orange block font-heading mb-2">2024 - 2026</span>
+                        <h4 class="text-white font-bold text-sm mb-2">Expansión & Proyección</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Diversificación a videos corporativos, alianzas con marcas, eventos masivos y desarrollo de ficción cinematográfica.
                         </p>
                     </div>
                 </div>
-
             </div>
+
         </section>
 
 
@@ -276,119 +425,292 @@
         </section>
 
 
-        <!-- Services Section -->
+                <!-- Services Section ("Nuestros Servicios") -->
         <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto relative">
             <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-orange/5 rounded-full filter blur-[120px] pointer-events-none -z-10"></div>
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Portafolio de Soluciones</span>
-                <h2 class="text-3xl sm:text-5xl font-black font-heading mt-4 mb-6 leading-tight text-wrap-balance">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                    Portafolio Integral de Soluciones
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black font-heading mt-2 mb-6 leading-tight text-wrap-balance">
                     NUESTROS SERVICIOS
                 </h2>
                 <p class="text-brand-greyLight text-base sm:text-lg leading-relaxed text-wrap-pretty">
-                    Cubrimos todas las etapas del proceso audiovisual combinando narrativa de vanguardia, capacidad técnica y soluciones personalizadas para cada tipo de cliente.
+                    Cubrimos todas las fases del ciclo audiovisual combinando narrativa de autor, tecnología de cine y acompañamiento transparente para artistas, marcas y empresas.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Grid of 6 Detailed Services -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                 
-                <!-- Service 1 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 1: Videoclips -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-compass"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-music"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-01 • FLAGSHIP
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Asesoría audiovisual</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Acompañamos a marcas, empresas y creadores en la planeación y desarrollo. Desde la conceptualización de una idea hasta la definición de formatos, narrativa, estética y estrategia de producción. Ofrecemos mirada creativa y técnica.
+                        <h3 class="text-xl font-bold mb-3 text-white">Videoclips Musicales</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Transformamos la propuesta artística y musical en una experiencia visual contundente. Diseñamos la narrativa visual, dirección de arte, coreografía, rodaje multicámara y postproducción con estética de cine.
                         </p>
+                        
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Master 4K DCI en ProRes 422HQ y H.264</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> 3 Píldoras en formato vertical (9:16) para TikTok/Reels</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Color Grading DaVinci Resolve con LUT cinematográfica</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Fotografías Behind The Scenes (BTS) en alta calidad</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Cotizar Asesoría <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 7-12 días</span>
+                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Cotizar Videoclip <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 2: Video Corporativo -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-camera-retro"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-02 • B2B
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Fotografía</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Creamos piezas fotográficas con una visión estética y narrativa. Desarrollamos fotografía publicitaria, corporativa, de producto, retrato y contenido para redes sociales, cuidando cada elemento para comunicar la identidad de tu marca.
+                        <h3 class="text-xl font-bold mb-3 text-white">Video Corporativo</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Comunica la solidez, cultura e impacto de tu empresa con elegancia cinematográfica. Desarrollamos videos institucionales, testimoniales de clientes, casos de éxito y contenido de comunicación estratégica interna y externa.
                         </p>
+
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Video institucional máster (2 a 4 minutos)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Cápsulas testimoniales cortas para LinkedIn / Web</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Microfonía inalámbrica de alta fidelidad 32-bit</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtitulado accesible en español e inglés</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Ver Fotografía <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 5-8 días</span>
+                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Cotizar Corporativo <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 3: Fotografía Profesional -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-share-nodes"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-03 • HIGH RES
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Marketing Digital</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Desarrollamos contenido audiovisual para conectar con audiencias. Creamos fotografías, videos, reels, piezas publicitarias y contenidos para redes sociales combinando formatos adecuados para tu estrategia de comunicación.
+                        <h3 class="text-xl font-bold mb-3 text-white">Fotografía de Marca</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Capturamos la esencia visual de tu marca o perfil artístico con fotografía publicitaria, retrato editorial, producto y cobertura de set. Cuidamos iluminación, texturas y dirección de modelos al máximo nivel.
                         </p>
+
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Galería seleccionada en alta resolución (Full-Frame)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Retoque editorial y etalonaje digital en Photoshop</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Archivos adaptados para imprenta y social media</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Licencia de uso comercial sin restricciones</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Impulsar Redes <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 3-5 días</span>
+                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Cotizar Fotografía <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 4: Marketing Digital -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-music"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-04 • PERFORMANCE
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Videoclips</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Llevamos la propuesta artística de cada músico a una experiencia visual inolvidable. Trabajamos desde el concepto y la propuesta de arte hasta la producción, dirección y postproducción, entregando una estética propia.
+                        <h3 class="text-xl font-bold mb-3 text-white">Marketing & Contenido Digital</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Producción de piezas audiovisuales pensadas específicamente para frenar el scroll y generar interacción real. Diseñamos formatos dinámicos para Instagram, TikTok y YouTube Shorts con ganchos visuales probados.
                         </p>
+
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Paquetes mensuales de Reels/TikToks dinámicos</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Estructura de guion con gancho en los primeros 3 segundos</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtítulos dinámicos de alta retención integrados</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Asesoría de publicación y tendencias de audio</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Producir Videoclip <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Planes Mensuales / Por Proyecto</span>
+                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Impulsar Redes <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Service 5 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 5: Cubrimiento de Eventos -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-building"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-05 • LIVE CINE
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Video Corporativo</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Contamos la esencia y trayectoria de empresas y organizaciones. Desarrollamos videos institucionales, testimoniales, piezas de presentación y contenidos de comunicación interna/externa transmitiendo profesionalismo y confianza.
+                        <h3 class="text-xl font-bold mb-3 text-white">Cubrimiento de Eventos</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Registramos la adrenalina y los momentos más emotivos de conciertos, conferencias, festivales culturales y activaciones de marca, sin interferir con la experiencia del público pero capturándolo todo.
                         </p>
+
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Aftermovie cinematográfico principal (1 a 3 minutos)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Corte express de 30-60s para redes en menos de 24 horas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Registro de audio directo de ponencias y ambiente</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Cobertura fotográfica de asistentes y escenografía</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Hacer Video Corporativo <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega Express: 24h a 4 días</span>
+                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Cotizar Evento <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Service 6 -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 rounded-xl transition-all duration-300 hover:border-brand-orange hover:-translate-y-2 flex flex-col justify-between">
+                <!-- Service 6: Asesoría Audiovisual -->
+                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-lg mb-6 text-xl">
-                            <i class="fa-solid fa-calendar-check"></i>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
+                                SRV-06 • STRATEGY
+                            </span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white">Cubrimiento de eventos</h3>
-                        <p class="text-brand-greyLight text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Registramos momentos de eventos capturando la energía y detalles únicos. Cubrimiento de eventos corporativos, culturales y de entretenimiento para revivir la experiencia y amplificar el alcance en canales digitales.
+                        <h3 class="text-xl font-bold mb-3 text-white">Asesoría & Consultoría</h3>
+                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                            Acompañamiento integral para creadores, productores y empresas que buscan estructurar un proyecto audiovisual antes de rodar. Evaluamos viabilidad técnica, desglose presupuestal y refinamiento de guion.
                         </p>
+
+                        <!-- Deliverables -->
+                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
+                            <ul class="text-xs text-brand-greyLight space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Dossier de producción y presupuesto desglosado</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Plan de rodaje técnico y orden de llamado optimizada</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Scouting de locaciones recomendadas en Bogotá</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Sesiones de consultoría 1 a 1 con la dirección</li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#contacto" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors flex items-center gap-2">
-                        Reservar Cubrimiento <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+
+                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
+                        <span class="text-[11px] text-brand-greyLight font-mono">Sesiones Presenciales / Virtuales</span>
+                        <a href="#contacto" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
+                            Agendar Asesoría <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
+
+            <!-- Production Methodology: The 4 Phases of Tasmania Films -->
+            <div class="bg-brand-shadow border border-brand-greyDark/40 p-8 sm:p-12 rounded-2xl relative overflow-hidden shadow-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-brand-orange block mb-2">Método de Trabajo Tasmania</span>
+                    <h3 class="text-2xl sm:text-3xl font-black font-heading text-white">Nuestra Metodología en 4 Fases</h3>
+                    <p class="text-brand-greyLight text-xs sm:text-sm mt-2">
+                        Garantizamos calidad constante y cero sorpresas en presupuesto o cronograma mediante un proceso probado paso a paso.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Phase 1 -->
+                    <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-6 rounded-xl relative">
+                        <span class="text-3xl font-black text-brand-orange/40 font-heading block mb-2">01</span>
+                        <h4 class="text-white font-bold text-base mb-2">Briefing & Concepto</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Alineamos objetivos, referencias visuales, tono y propuesta de guion. Diseñamos el moodboard estético inicial.
+                        </p>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-6 rounded-xl relative">
+                        <span class="text-3xl font-black text-brand-orange/40 font-heading block mb-2">02</span>
+                        <h4 class="text-white font-bold text-base mb-2">Preproducción Rigurosa</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Scouting de locaciones en Bogotá, casting, plan de rodaje minuto a minuto, pruebas de cámara y permisos oficiales.
+                        </p>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-6 rounded-xl relative">
+                        <span class="text-3xl font-black text-brand-orange/40 font-heading block mb-2">03</span>
+                        <h4 class="text-white font-bold text-base mb-2">Rodaje Cinematográfico</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Grabación en set con óptica de cine, iluminación profesional, sonido directo, dirección de actores y monitoreo inalámbrico.
+                        </p>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="bg-brand-greyDark/10 border border-brand-orange/40 p-6 rounded-xl relative">
+                        <span class="text-3xl font-black text-brand-orange block font-heading mb-2">04</span>
+                        <h4 class="text-brand-orange font-bold text-base mb-2">Post & Masterización</h4>
+                        <p class="text-xs text-brand-greyLight leading-relaxed">
+                            Montaje de ritmo, corrección de color en DaVinci Resolve, mezcla de sonido envolvente y entrega multiformato en 4K.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
 
@@ -1268,95 +1590,346 @@
         </section>
 
 
-        <!-- Calculator Section ("Cotizador Pro") -->
+                <!-- Calculator Section ("Cotizador Pro") -->
         <section id="cotizador" class="py-24 px-6 bg-brand-shadow border-t border-brand-greyDark/20 relative">
-            <div class="max-w-5xl mx-auto">
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-orange/5 rounded-full filter blur-[140px] pointer-events-none -z-10"></div>
+            
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Herramienta Interactiva</span>
-                    <h2 class="text-3xl sm:text-5xl font-black font-heading mt-4 mb-6 leading-tight text-wrap-balance">
+                    <div class="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full mb-3">
+                        <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-orange font-mono">STUDIO QUOTER // V2.6</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black font-heading mt-2 mb-4 leading-tight text-wrap-balance">
                         CALCULA TU PROYECTO
                     </h2>
                     <p class="text-brand-greyLight text-base sm:text-lg leading-relaxed text-wrap-pretty">
-                        Selecciona los requerimientos de tu producción para obtener un estimado aproximado en tiempo real y cargarlo a tu solicitud.
+                        Configura el calibre técnico, equipamiento de cámara, jornadas de rodaje y postproducción para generar una estimación transparente en pesos colombianos (COP).
                     </p>
                 </div>
 
-                <div class="bg-brand-greyDark/10 border border-brand-greyDark/30 p-8 sm:p-12 rounded-2xl shadow-2xl">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Main Calculator Terminal -->
+                <div class="bg-gradient-to-b from-brand-greyDark/20 to-brand-shadow border border-brand-greyDark/40 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                    
+                    <!-- Terminal Top Bar -->
+                    <div class="flex flex-wrap items-center justify-between pb-6 mb-8 border-b border-brand-greyDark/40 gap-4 text-xs font-mono">
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                            <span class="text-brand-greyLight ml-2">TASMANIA FILMS // TERMINAL DE COTIZACIÓN</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-brand-orange font-bold bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/30">
+                                ID: <span id="calc-ref-id">TF-BOG-2026-X89</span>
+                            </span>
+                            <span class="text-brand-greyLight hidden sm:inline">• MONEDA: COP</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                         
-                        <!-- Options Column -->
+                        <!-- Left Column: Interactive Controls -->
                         <div class="lg:col-span-7 space-y-8">
-                            <!-- Service Type Selection -->
+                            
+                            <!-- 1. Camera & Optics Tier Selection (High End Studio Feature) -->
                             <div>
-                                <label class="text-xs font-bold uppercase tracking-wider text-brand-orange block mb-3">1. Tipo de Producción</label>
-                                <div class="grid grid-cols-2 gap-3" id="calc-services">
-                                    <label class="cursor-pointer border border-brand-orange bg-brand-orange/10 p-3.5 rounded-lg flex items-center gap-3 transition-all calc-service-option">
-                                        <input type="radio" name="calc-service" value="videoclip" checked class="accent-brand-orange">
-                                        <span class="text-xs font-bold text-white">Videoclip Musical</span>
+                                <div class="flex items-center justify-between mb-3">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-2">
+                                        <i class="fa-solid fa-camera"></i> 1. Paquete de Cámara & Ópticas
                                     </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-lg flex items-center gap-3 transition-all calc-service-option">
-                                        <input type="radio" name="calc-service" value="corporativo" class="accent-brand-orange">
-                                        <span class="text-xs font-bold text-white">Video Corporativo</span>
+                                    <span class="text-[11px] text-brand-greyLight font-mono">Gama de Producción</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="calc-camera-tier">
+                                    <label class="cursor-pointer border-2 border-brand-orange bg-brand-orange/10 p-4 rounded-xl flex flex-col justify-between transition-all camera-tier-card select-none" data-tier="indie">
+                                        <div class="flex items-start justify-between">
+                                            <div>
+                                                <span class="text-xs font-bold text-white block">Sony FX Cinema Line</span>
+                                                <span class="text-[11px] text-brand-greyLight">FX3 / FX6 + Lentes Prime f/1.4</span>
+                                            </div>
+                                            <input type="radio" name="calc-camera" value="indie" checked class="accent-brand-orange mt-1">
+                                        </div>
+                                        <div class="mt-3 flex items-center justify-between pt-2 border-t border-brand-greyDark/30 text-[11px]">
+                                            <span class="text-brand-orange font-bold">Pack Estándar Incluido</span>
+                                            <span class="text-brand-greyLight">4K Nativo</span>
+                                        </div>
                                     </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-lg flex items-center gap-3 transition-all calc-service-option">
-                                        <input type="radio" name="calc-service" value="fotografia" class="accent-brand-orange">
-                                        <span class="text-xs font-bold text-white">Fotografía de Marca</span>
-                                    </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-lg flex items-center gap-3 transition-all calc-service-option">
-                                        <input type="radio" name="calc-service" value="eventos" class="accent-brand-orange">
-                                        <span class="text-xs font-bold text-white">Cubrimiento Eventos</span>
+
+                                    <label class="cursor-pointer border-2 border-brand-greyDark/50 bg-brand-shadow p-4 rounded-xl flex flex-col justify-between transition-all camera-tier-card select-none" data-tier="master">
+                                        <div class="flex items-start justify-between">
+                                            <div>
+                                                <span class="text-xs font-bold text-white block">RED / ARRI Cine Ultra</span>
+                                                <span class="text-[11px] text-brand-greyLight">Komodo-X 6K / Ópticas Anamórficas</span>
+                                            </div>
+                                            <input type="radio" name="calc-camera" value="master" class="accent-brand-orange mt-1">
+                                        </div>
+                                        <div class="mt-3 flex items-center justify-between pt-2 border-t border-brand-greyDark/30 text-[11px]">
+                                            <span class="text-brand-orange font-bold">+ $1.800.000 COP</span>
+                                            <span class="text-brand-greyLight">Grado Publicidad TV</span>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
 
-                            <!-- Duration Slider -->
+                            <!-- 2. Service Type Selection -->
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-clapperboard"></i> 2. Tipo de Producción
+                                </label>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="calc-services">
+                                    <label class="cursor-pointer border border-brand-orange bg-brand-orange/10 p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-music text-brand-orange text-sm"></i>
+                                            <input type="radio" name="calc-service" value="videoclip" checked class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Videoclip Musical</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $2.400.000</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-building text-brand-greyLight text-sm"></i>
+                                            <input type="radio" name="calc-service" value="corporativo" class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Video Corporativo</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $2.000.000</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-camera text-brand-greyLight text-sm"></i>
+                                            <input type="radio" name="calc-service" value="fotografia" class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Fotografía Marca</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $1.300.000</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-calendar-check text-brand-greyLight text-sm"></i>
+                                            <input type="radio" name="calc-service" value="eventos" class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Cubrimiento Eventos</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $1.700.000</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-bullhorn text-brand-greyLight text-sm"></i>
+                                            <input type="radio" name="calc-service" value="publicidad" class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Spot Comercial</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $2.800.000</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/50 bg-brand-shadow p-3.5 rounded-xl flex flex-col gap-1 transition-all calc-service-option select-none">
+                                        <div class="flex items-center justify-between">
+                                            <i class="fa-solid fa-share-nodes text-brand-greyLight text-sm"></i>
+                                            <input type="radio" name="calc-service" value="marketing" class="accent-brand-orange">
+                                        </div>
+                                        <span class="text-xs font-bold text-white mt-1">Pack Social Reels</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">Desde $1.500.000</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 3. Shooting Days (Jornadas de Rodaje) -->
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-2">
+                                        <i class="fa-solid fa-calendar-days"></i> 3. Jornadas de Rodaje (Días de Set)
+                                    </label>
+                                    <span class="text-[11px] text-brand-greyLight font-mono" id="calc-days-tag">1 Jornada (10 Horas)</span>
+                                </div>
+                                <div class="grid grid-cols-4 gap-2.5" id="calc-days-selector">
+                                    <button type="button" class="calc-day-btn active py-2.5 px-3 rounded-lg border border-brand-orange bg-brand-orange text-white font-bold text-xs font-mono transition-all" data-days="1">1 Día</button>
+                                    <button type="button" class="calc-day-btn py-2.5 px-3 rounded-lg border border-brand-greyDark/50 bg-brand-shadow text-brand-greyLight hover:text-white font-bold text-xs font-mono transition-all" data-days="2">2 Días</button>
+                                    <button type="button" class="calc-day-btn py-2.5 px-3 rounded-lg border border-brand-greyDark/50 bg-brand-shadow text-brand-greyLight hover:text-white font-bold text-xs font-mono transition-all" data-days="3">3 Días</button>
+                                    <button type="button" class="calc-day-btn py-2.5 px-3 rounded-lg border border-brand-greyDark/50 bg-brand-shadow text-brand-greyLight hover:text-white font-bold text-xs font-mono transition-all" data-days="4">4+ Días</button>
+                                </div>
+                            </div>
+
+                            <!-- 4. Duration Slider -->
                             <div>
                                 <div class="flex justify-between items-center mb-2">
-                                    <label for="calc-duration" class="text-xs font-bold uppercase tracking-wider text-brand-orange">2. Duración Aprox. del Entrega</label>
-                                    <span id="calc-duration-val" class="text-xs font-bold text-white bg-brand-greyDark/30 px-2.5 py-1 rounded">3 Minutos</span>
+                                    <label for="calc-duration" class="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-2">
+                                        <i class="fa-solid fa-stopwatch"></i> 4. Duración Estimada de la Pieza Master
+                                    </label>
+                                    <span id="calc-duration-val" class="text-xs font-bold text-white bg-brand-greyDark/40 border border-brand-greyDark/60 px-3 py-1 rounded-md font-mono">3 Minutos</span>
                                 </div>
                                 <input type="range" id="calc-duration" min="1" max="10" value="3" class="w-full h-2 bg-brand-greyDark/50 rounded-lg appearance-none cursor-pointer accent-brand-orange">
+                                <div class="flex justify-between text-[10px] text-brand-greyLight font-mono mt-1 px-1">
+                                    <span>30s (Reel)</span>
+                                    <span>1 min</span>
+                                    <span>3 min (Cine/Clip)</span>
+                                    <span>5 min</span>
+                                    <span>10 min (Docu)</span>
+                                </div>
                             </div>
 
-                            <!-- Addons Checkboxes -->
+                            <!-- 5. Technical Add-ons (Chips with Toggle State) -->
                             <div>
-                                <label class="text-xs font-bold uppercase tracking-wider text-brand-orange block mb-3">3. Requerimientos Adicionales</label>
+                                <label class="text-xs font-bold uppercase tracking-wider text-brand-orange flex items-center gap-2 mb-3">
+                                    <i class="fa-solid fa-sliders"></i> 5. Equipamiento y Módulos Adicionales
+                                </label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/60 p-3 rounded-lg flex items-center gap-3 text-xs text-brand-greyLight hover:text-white transition-colors">
-                                        <input type="checkbox" id="addon-drone" value="350000" class="accent-brand-orange calc-addon">
-                                        <span>Tomas Aéreas con Dron (4K)</span>
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-drone" value="450000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Tomas Aéreas Dron 4K FPV</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+450k</span>
                                     </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/60 p-3 rounded-lg flex items-center gap-3 text-xs text-brand-greyLight hover:text-white transition-colors">
-                                        <input type="checkbox" id="addon-multicam" value="400000" class="accent-brand-orange calc-addon">
-                                        <span>Cámara Adicional (Multi-cam)</span>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-lights" value="650000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Gaffer + Camión Aputure</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+650k</span>
                                     </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/60 p-3 rounded-lg flex items-center gap-3 text-xs text-brand-greyLight hover:text-white transition-colors">
-                                        <input type="checkbox" id="addon-script" value="250000" class="accent-brand-orange calc-addon">
-                                        <span>Guion y Dirección Creativa</span>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-audio" value="420000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Sonido Directo Boom Sennheiser</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+420k</span>
                                     </label>
-                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/60 p-3 rounded-lg flex items-center gap-3 text-xs text-brand-greyLight hover:text-white transition-colors">
-                                        <input type="checkbox" id="addon-express" value="300000" class="accent-brand-orange calc-addon">
-                                        <span>Postproducción Express</span>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-color" value="500000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Color DaVinci Master Pro</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+500k</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-script" value="380000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Guion Literario & Storyboard</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+380k</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-reels" value="300000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Pack 3 Reels Verticales 9:16</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+300k</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-express" value="400000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Entrega Express Prioritaria 72h</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+400k</span>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-brand-greyDark/40 bg-brand-shadow/80 p-3 rounded-xl flex items-center justify-between text-xs transition-all addon-chip select-none hover:border-brand-orange/50">
+                                        <div class="flex items-center gap-2.5">
+                                            <input type="checkbox" id="addon-multicam" value="550000" class="accent-brand-orange calc-addon w-4 h-4">
+                                            <span class="text-white font-medium">Segunda Cámara (Operador B)</span>
+                                        </div>
+                                        <span class="text-[11px] font-mono text-brand-orange font-bold">+550k</span>
                                     </label>
                                 </div>
                             </div>
+
                         </div>
 
-                        <!-- Price Output Column -->
-                        <div class="lg:col-span-5 bg-brand-shadow border border-brand-greyDark/50 p-8 rounded-xl flex flex-col justify-between text-center min-h-[320px]">
-                            <div>
-                                <span class="text-xs uppercase tracking-widest text-brand-greyLight font-semibold block mb-2">Estimado Aproximado Base</span>
-                                <div class="text-3xl sm:text-4xl font-black font-heading text-brand-orange mb-4" id="calc-price-display">
-                                    $ 2.450.000 COP
+                        <!-- Right Column: Cinematic Quotation Receipt / Live Invoice -->
+                        <div class="lg:col-span-5 bg-black/80 border border-brand-greyDark/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+                            
+                            <!-- Receipt Header -->
+                            <div class="border-b border-dashed border-brand-greyDark/60 pb-6 mb-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-8 h-8 rounded bg-brand-orange flex items-center justify-center font-black text-white text-xs">
+                                            TF
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-bold text-xs uppercase tracking-wider">Tasmania Films</h4>
+                                            <span class="text-[10px] text-brand-greyLight">Bogotá D.C. • Colombia</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-brand-orange font-mono block font-bold">HOJA DE ESTIMACIÓN</span>
+                                        <span class="text-[10px] text-brand-greyLight font-mono">FECHA: 2026</span>
+                                    </div>
                                 </div>
-                                <p class="text-[11px] text-brand-greyLight/80 leading-relaxed mb-6">
-                                    *Este cálculo es una referencia estimada inicial. El valor definitivo se ajusta según requerimientos técnicos específicos y jornadas de rodaje.
-                                </p>
+
+                                <div class="text-[11px] text-brand-greyLight font-mono flex justify-between pt-2">
+                                    <span>REFERENCIA:</span>
+                                    <span class="text-white font-bold" id="receipt-ref-code">TF-2026-X89</span>
+                                </div>
                             </div>
 
-                            <button id="calc-transfer-btn" class="w-full py-3.5 bg-brand-orange text-white font-bold text-xs uppercase tracking-wider rounded hover:bg-white hover:text-brand-shadow transition-all duration-300 flex items-center justify-center gap-2">
-                                Usar esta Cotización <i class="fa-solid fa-arrow-down text-xs"></i>
-                            </button>
+                            <!-- Itemized Breakdown -->
+                            <div class="space-y-3.5 mb-8 flex-1 text-xs font-mono">
+                                <div class="flex justify-between items-center text-brand-greyLight">
+                                    <span>Servicio Base:</span>
+                                    <span class="text-white font-semibold text-right" id="receipt-service-name">Videoclip Musical</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-center text-brand-greyLight">
+                                    <span>Gama de Cámara:</span>
+                                    <span class="text-white font-semibold text-right" id="receipt-camera-name">Sony FX Cine Line</span>
+                                </div>
+
+                                <div class="flex justify-between items-center text-brand-greyLight">
+                                    <span>Jornadas de Set:</span>
+                                    <span class="text-white font-semibold text-right" id="receipt-days-val">1 Jornada (10h)</span>
+                                </div>
+
+                                <div class="flex justify-between items-center text-brand-greyLight">
+                                    <span>Duración Estimada:</span>
+                                    <span class="text-white font-semibold text-right" id="receipt-duration-val">3 Minutos</span>
+                                </div>
+
+                                <div class="pt-3 border-t border-brand-greyDark/30">
+                                    <span class="text-[11px] text-brand-orange uppercase tracking-wider font-bold block mb-2 font-sans">
+                                        Módulos Técnicos Activos (<span id="receipt-addons-count">0</span>):
+                                    </span>
+                                    <div id="receipt-addons-list" class="space-y-1.5 text-[11px] text-brand-greyLight max-h-36 overflow-y-auto pr-1">
+                                        <div class="text-brand-greyLight/60 italic">Ningún módulo adicional seleccionado</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Total Price & Call to Action -->
+                            <div class="pt-6 border-t-2 border-dashed border-brand-greyDark/60">
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <span class="text-xs uppercase tracking-widest text-brand-greyLight font-bold">Total Estimado:</span>
+                                    <span class="text-[11px] text-brand-orange font-mono font-bold">COP (Pesos Col.)</span>
+                                </div>
+
+                                <div class="text-3xl sm:text-4xl font-black font-heading text-brand-orange mb-4 tracking-tight" id="calc-price-display">
+                                    $ 2.400.000 COP
+                                </div>
+
+                                <p class="text-[10px] text-brand-greyLight/80 leading-relaxed mb-6 font-mono">
+                                    *Valores aproximados sujetos a desglose de guion final, permisos de locación y viáticos fuera de Bogotá.
+                                </p>
+
+                                <div class="space-y-2.5">
+                                    <button id="calc-transfer-btn" class="w-full py-4 bg-brand-orange text-white font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-white hover:text-brand-shadow transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-brand-orange/20 cursor-pointer">
+                                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                                        Bloquear Fecha con esta Cotización
+                                    </button>
+
+                                    <button id="calc-copy-btn" class="w-full py-2.5 bg-brand-greyDark/30 border border-brand-greyDark/60 text-brand-greyLight hover:text-white hover:border-brand-orange text-xs font-mono rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                        <i class="fa-solid fa-copy text-xs"></i>
+                                        <span id="copy-btn-text">Copiar Resumen para WhatsApp / Correo</span>
+                                    </button>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
