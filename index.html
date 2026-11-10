@@ -45,8 +45,13 @@
     <!-- Three.js 3D WebGL Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Custom CSS (Cache Busting v3.0) -->
+    <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body class="bg-brand-shadow text-brand-light font-body overflow-x-hidden">
 
@@ -452,38 +457,39 @@
         </section>
 
 
-        <!-- Authority Section (Stats) -->
-        <section class="py-16 bg-brand-greyDark/10 border-y border-brand-greyDark/20 px-6">
+        <!-- Authority Section (Métricas y Autoridad) -->
+        <section class="py-16 bg-brand-greyDark/10 border-y border-brand-greyDark/20 px-6 relative">
             <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center divide-y divide-brand-greyDark/20 md:divide-y-0 md:divide-x md:divide-brand-greyDark/20">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-y divide-brand-greyDark/20 md:divide-y-0 md:divide-x md:divide-brand-greyDark/20">
                     
-                    <div class="flex flex-col items-center justify-center p-4">
-                        <span class="text-4xl sm:text-5xl font-black font-heading text-brand-orange mb-2">+4</span>
-                        <span class="text-xs uppercase tracking-widest text-brand-greyLight font-semibold">Años de Experiencia</span>
+                    <div class="flex flex-col items-center justify-center p-3">
+                        <span class="text-3xl sm:text-4xl font-black font-heading text-brand-orange mb-1">+4</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-greyLight font-semibold">Años de Trayectoria</span>
+                        <span class="text-[10px] text-zinc-500 font-mono mt-0.5">Bogotá D.C.</span>
                     </div>
                     
-                    <div class="flex flex-col items-center justify-center p-4">
-                        <i class="fa-solid fa-clapperboard text-brand-orange/60 text-lg mb-2"></i>
-                        <span class="text-lg font-bold text-white mb-1">Videoclips</span>
-                        <span class="text-xs text-brand-greyLight">Música e Identidad Visual</span>
+                    <div class="flex flex-col items-center justify-center p-3">
+                        <span class="text-3xl sm:text-4xl font-black font-heading text-white mb-1">+50</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-greyLight font-semibold">Rodajes Culminados</span>
+                        <span class="text-[10px] text-zinc-500 font-mono mt-0.5">Música & B2B</span>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-4">
-                        <i class="fa-solid fa-briefcase text-brand-orange/60 text-lg mb-2"></i>
-                        <span class="text-lg font-bold text-white mb-1">Video Corporativo</span>
-                        <span class="text-xs text-brand-greyLight">Confianza e Institucional</span>
+                    <div class="flex flex-col items-center justify-center p-3">
+                        <span class="text-3xl sm:text-4xl font-black font-heading text-brand-orange mb-1">4K/6K</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-greyLight font-semibold">Cinema RAW & ProRes</span>
+                        <span class="text-[10px] text-zinc-500 font-mono mt-0.5">DaVinci Studio</span>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-4">
-                        <i class="fa-solid fa-camera text-brand-orange/60 text-lg mb-2"></i>
-                        <span class="text-lg font-bold text-white mb-1">Fotografía</span>
-                        <span class="text-xs text-brand-greyLight">Publicitaria y Producto</span>
+                    <div class="flex flex-col items-center justify-center p-3">
+                        <span class="text-3xl sm:text-4xl font-black font-heading text-white mb-1">+10M</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-greyLight font-semibold">Vistas Acumuladas</span>
+                        <span class="text-[10px] text-zinc-500 font-mono mt-0.5">YouTube & Redes</span>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-4">
-                        <i class="fa-solid fa-network-wired text-brand-orange/60 text-lg mb-2"></i>
-                        <span class="text-lg font-bold text-white mb-1">Redes Sociales</span>
-                        <span class="text-xs text-brand-greyLight">Marketing Digital</span>
+                    <div class="flex flex-col items-center justify-center p-3">
+                        <span class="text-3xl sm:text-4xl font-black font-heading text-brand-orange mb-1">100%</span>
+                        <span class="text-[11px] uppercase tracking-widest text-brand-greyLight font-semibold">Puntualidad de Entrega</span>
+                        <span class="text-[10px] text-zinc-500 font-mono mt-0.5">Garantía por Contrato</span>
                     </div>
 
                 </div>
@@ -2700,6 +2706,6 @@
     <div id="custom-cursor-dot" class="hidden md:block fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-brand-orange pointer-events-none z-[100] -translate-x-1/2 -translate-y-1/2 transition-transform duration-75"></div>
 
     <!-- Script Execution -->
-    <script src="script.js"></script>
+    <script src="script.js?v=3.0"></script>
 </body>
 </html>
