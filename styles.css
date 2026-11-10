@@ -1,88 +1,247 @@
 /* Tasmania Films - Premium Stylesheet */
 
+
+
 /* --- Custom Variables & Theme Setup --- */
+
 :root {
+
   --color-primary: #FF6200;
+
   --color-shadow: #141414;
+
   --color-light: #FFFFFF;
+
   --color-grey-light: #A8A9AD;
+
   --color-grey-dark: #383837;
 
+
+
   /* Custom styling for standard scrollbars */
+
   --scrollbar-thumb: var(--color-primary);
+
   --scrollbar-track: var(--color-shadow);
+
   
+
   /* Automatically adapt native browser controls to dark scheme */
+
   color-scheme: dark;
+
 }
+
+
 
 /* --- Base & Scrollbar Styling --- */
+
 body {
+
   background-color: var(--color-shadow);
+
   color: var(--color-light);
+
   overflow-x: hidden;
+
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+
   scrollbar-width: thin;
+
 }
+
+
 
 /* Legacy fallback for WebKit/Blink browsers */
+
 @supports not (scrollbar-color: auto) {
+
   ::-webkit-scrollbar {
+
     width: 8px;
+
     height: 8px;
+
   }
+
+
 
   ::-webkit-scrollbar-thumb {
+
     background: var(--scrollbar-thumb);
+
     border-radius: 4px;
+
   }
+
+
 
   ::-webkit-scrollbar-track {
+
     background: var(--scrollbar-track);
+
   }
+
 }
+
+
 
 /* --- Typographical Adjustments --- */
+
 h1, h2, h3, h4, h5, h6 {
+
   text-wrap: balance;
+
   font-family: 'Montserrat', sans-serif;
+
   letter-spacing: -0.02em;
+
 }
+
+
 
 p, li, blockquote {
+
   text-wrap: pretty;
+
   color: var(--color-grey-light);
+
 }
 
-/* --- Navigation Header --- */
-#main-header.scrolled {
-  background-color: rgba(20, 20, 20, 0.95);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+
+
+/* --- Navigation Header (Futuristic Floating Dock) --- */
+
+#main-header {
+
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
+
+#main-header.scrolled {
+
+  padding-top: 0.35rem;
+
+  padding-bottom: 0.35rem;
+
+}
+
+
+
+#main-header.scrolled > div {
+
+  background-color: rgba(14, 14, 16, 0.96) !important;
+
+  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.85), 0 0 25px -5px rgba(255, 98, 0, 0.25);
+
+  border-color: rgba(255, 98, 0, 0.35);
+
+}
+
+
+
+.nav-pill {
+
+  position: relative;
+
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+
+.nav-pill:hover {
+
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+
+}
+
+
 
 /* --- Mobile Drawer Menu --- */
+
 .mobile-drawer {
+
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
 
 .mobile-drawer.open {
+
   transform: translateX(0);
+
 }
 
-/* --- Custom Cards & Hovers --- */
+
+
+/* --- Custom Cards & Hovers (Futuristic Cinema Service Cards) --- */
+
 .service-card {
+
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  background: linear-gradient(180deg, rgba(26, 26, 30, 0.75) 0%, rgba(14, 14, 16, 0.95) 100%);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+
 }
+
+
 
 .service-card:hover {
-  background-color: rgba(56, 56, 55, 0.25);
-  box-shadow: 0 10px 30px -10px rgba(255, 98, 0, 0.1);
+
+  transform: translateY(-8px);
+
+  border-color: rgba(255, 98, 0, 0.5);
+
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.95), 0 0 35px -5px rgba(255, 98, 0, 0.22);
+
 }
 
+
+
+.service-card.hidden-service {
+
+  display: none !important;
+
+}
+
+
+
+.service-filter-btn {
+
+  transition: all 0.25s ease;
+
+}
+
+
+
+.service-filter-btn.active {
+
+  background: linear-gradient(135deg, #FF6200 0%, #ea580c 100%);
+
+  color: #000;
+
+  border-color: #FF6200;
+
+  box-shadow: 0 0 18px rgba(255, 98, 0, 0.45);
+
+}
+
+
+
+/* --- Portfolio Grid Items & Filtering --- */
 .portfolio-item {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1 !important;
+  display: flex !important;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .portfolio-item:hover {
@@ -92,308 +251,594 @@ p, li, blockquote {
 
 /* Portfolio Filtering animation styles */
 .portfolio-item.hidden-item {
-  opacity: 0;
-  transform: scale(0.9);
-  pointer-events: none;
-  position: absolute;
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border: none;
-  overflow: hidden;
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .portfolio-item.show-item {
-  animation: scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex !important;
+  opacity: 1 !important;
+  animation: scaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+
 
 @keyframes scaleUp {
+
   from {
+
     opacity: 0;
+
     transform: scale(0.9);
+
   }
+
   to {
+
     opacity: 1;
+
     transform: scale(1);
+
   }
+
 }
+
+
 
 /* --- Timeline Layout --- */
+
 .timeline-item {
+
   position: relative;
+
   transition: all 0.3s ease;
+
 }
+
+
 
 .timeline-item::before {
+
   content: '';
+
   position: absolute;
+
   left: -33px;
+
   top: 0;
+
   bottom: 0;
+
   width: 2px;
+
   background-color: var(--color-grey-dark);
+
   z-index: 0;
+
 }
+
+
 
 .timeline-item:last-child::before {
+
   display: none;
+
 }
+
+
 
 /* --- Dialog Lightbox styling --- */
+
 dialog {
+
   opacity: 0;
+
   transform: scale(0.95);
+
   transition: opacity 0.3s ease, transform 0.3s ease;
+
 }
+
+
 
 dialog[open] {
+
   opacity: 1;
+
   transform: scale(1);
+
 }
+
+
 
 dialog::backdrop {
+
   background: rgba(0, 0, 0, 0.85);
+
   backdrop-filter: blur(8px);
+
   opacity: 0;
+
   transition: opacity 0.3s ease;
+
 }
+
+
 
 dialog[open]::backdrop {
+
   opacity: 1;
+
 }
+
+
 
 /* --- Form Validation UI --- */
+
 /* Native HTML5 validation border alerts when interactive */
+
 input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
+
   border-color: #ef4444 !important;
+
 }
+
+
 
 input.interacted:invalid, select.interacted:invalid, textarea.interacted:invalid {
+
   border-color: #ef4444 !important;
+
 }
+
+
 
 input.interacted:valid, select.interacted:valid, textarea.interacted:valid {
+
   border-color: var(--color-primary) !important;
+
 }
+
+
 
 /* --- Scroll Entry Animations (Progressive Enhancement) --- */
+
 /* Fallback stylesheet for reveal animation */
+
 .reveal-on-scroll {
+
   opacity: 0;
+
   transform: translateY(30px);
+
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
   will-change: opacity, transform;
+
 }
+
+
 
 .reveal-on-scroll.revealed {
+
   opacity: 1;
+
   transform: translateY(0);
+
 }
+
+
 
 /* Native CSS Scroll-driven animations for browsers supporting it */
+
 @media (prefers-reduced-motion: no-preference) {
+
   @supports ((animation-timeline: view()) and (animation-range: entry)) {
+
     @keyframes reveal-up {
+
       from {
+
         opacity: 0;
+
         transform: translateY(40px);
+
       }
+
       to {
+
         opacity: 1;
+
         transform: translateY(0);
+
       }
+
     }
+
+
 
     /* We disable JS transition if native CSS view-timeline is active */
+
     .reveal-on-scroll {
+
       transition: none;
+
       animation: reveal-up auto linear backwards;
+
       animation-timeline: view();
+
       animation-range: entry 10% cover 30%;
+
     }
+
   }
+
 }
+
+
 
 /* --- Equalizer Animation --- */
+
 .eq-bars.playing .eq-bar:nth-child(1) {
+
   animation: eqBounce 0.8s ease-in-out infinite alternate;
+
 }
+
 .eq-bars.playing .eq-bar:nth-child(2) {
+
   animation: eqBounce 1.2s ease-in-out infinite alternate 0.2s;
+
 }
+
 .eq-bars.playing .eq-bar:nth-child(3) {
+
   animation: eqBounce 0.6s ease-in-out infinite alternate 0.4s;
+
 }
+
+
 
 @keyframes eqBounce {
+
   0% { height: 25%; }
+
   100% { height: 100%; }
+
 }
+
+
 
 /* --- Custom Cursor States --- */
+
 #custom-cursor.cursor-expand {
+
   width: 50px;
+
   height: 50px;
+
   background-color: rgba(255, 98, 0, 0.15);
+
   border-color: var(--color-primary);
+
 }
+
+
 
 #custom-cursor.cursor-play {
+
   width: 65px;
+
   height: 65px;
+
   background-color: var(--color-primary);
+
   border-color: var(--color-primary);
+
   box-shadow: 0 0 20px rgba(255, 98, 0, 0.5);
+
 }
+
+
 
 #custom-cursor.cursor-play::after {
+
   content: 'PLAY';
+
   letter-spacing: 0.1em;
+
 }
+
+
 
 /* Hide default cursor on interactive hover elements when custom cursor is active */
+
 @media (min-width: 768px) {
+
   body.custom-cursor-active a, 
+
   body.custom-cursor-active button, 
+
   body.custom-cursor-active .portfolio-item {
+
     cursor: none;
+
   }
+
 }
+
+
 
 /* --- Calculator Custom Ranges & Radio Cards --- */
+
 input[type="range"]::-webkit-slider-thumb {
+
   -webkit-appearance: none;
+
   width: 18px;
+
   height: 18px;
+
   border-radius: 50%;
+
   background: var(--color-primary);
+
   cursor: pointer;
+
   box-shadow: 0 0 10px rgba(255, 98, 0, 0.5);
+
   transition: transform 0.2s ease;
+
 }
+
+
 
 input[type="range"]::-webkit-slider-thumb:hover {
+
   transform: scale(1.2);
+
 }
+
+
 
 /* --- Three.js 3D WebGL Canvas --- */
+
 #three-canvas {
+
   position: fixed;
+
   top: 0;
+
   left: 0;
+
   width: 100vw;
+
   height: 100vh;
+
   pointer-events: none;
+
   z-index: 0;
+
   opacity: 0.55;
+
   mix-blend-mode: screen;
+
 }
+
+
 
 /* --- Interactive Photo Hotspots --- */
+
 .hotspot-pulse {
+
   position: relative;
+
 }
+
+
 
 .hotspot-pulse::before {
+
   content: '';
+
   position: absolute;
+
   inset: -6px;
+
   border-radius: 9999px;
+
   border: 2px solid var(--color-primary);
+
   animation: hotspotWave 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+
 }
+
+
 
 @keyframes hotspotWave {
+
   0% {
+
     transform: scale(0.8);
+
     opacity: 1;
+
   }
+
   100% {
+
     transform: scale(2.2);
+
     opacity: 0;
+
   }
+
 }
+
+
 
 .hotspot-content {
+
   opacity: 0;
+
   transform: translateY(10px) scale(0.95);
+
   pointer-events: none;
+
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
 
 .hotspot-wrapper:hover .hotspot-content,
+
 .hotspot-wrapper.active .hotspot-content {
+
   opacity: 1;
+
   transform: translateY(0) scale(1);
+
   pointer-events: auto;
+
 }
+
+
 
 /* --- Interactive Story Tabs --- */
+
 .story-tab-btn {
+
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
+
 
 .story-tab-btn.active {
+
   background-color: var(--color-primary);
+
   color: #FFFFFF;
+
   border-color: var(--color-primary);
+
   box-shadow: 0 4px 20px -2px rgba(255, 98, 0, 0.4);
+
 }
+
+
 
 .story-content-panel {
+
   display: none;
+
   animation: fadeInStory 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
 }
+
+
 
 .story-content-panel.active {
+
   display: block;
+
 }
+
+
 
 @keyframes fadeInStory {
+
   from {
+
     opacity: 0;
+
     transform: translateY(12px);
+
   }
+
   to {
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
 }
+
+
 
 /* --- Collaboration Cards & Marquee --- */
+
 .collab-card {
+
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
+
+
 .collab-card:hover {
+
   transform: translateY(-5px);
+
   border-color: var(--color-primary);
+
   box-shadow: 0 10px 30px -5px rgba(255, 98, 0, 0.2);
+
 }
+
+
+
+
+
 
 
 
 
 /* --- High-End Studio Quoter & Interactive Elements --- */
+
 .camera-tier-card {
+
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
 .camera-tier-card:hover {
+
   transform: translateY(-2px);
+
   border-color: rgba(255, 98, 0, 0.7);
+
 }
+
+
 
 .calc-day-btn {
+
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.calc-day-btn:hover {
-  border-color: var(--color-primary);
+
 }
 
+.calc-day-btn:hover {
+
+  border-color: var(--color-primary);
+
+}
+
+
+
 .addon-chip {
+
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
+
 .addon-chip:hover {
+
   transform: translateY(-1px);
+
 }
+

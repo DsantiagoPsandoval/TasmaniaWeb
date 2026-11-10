@@ -53,70 +53,136 @@
     <!-- Three.js 3D Interactive WebGL Canvas -->
     <canvas id="three-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
 
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-brand-shadow/90 backdrop-blur-md border-b border-brand-greyDark/30 transition-all duration-300" id="main-header">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Navigation Header (Modern Futuristic Floating HUD Bar) -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3 md:py-4 px-3 sm:px-6 lg:px-8" id="main-header">
+        <div class="max-w-7xl mx-auto backdrop-blur-xl bg-[#121214]/85 border border-white/10 rounded-2xl md:rounded-full px-4 sm:px-6 py-2.5 shadow-[0_12px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(255,98,0,0.08)] flex justify-between items-center relative overflow-hidden transition-all duration-300">
+            <!-- Cyber ambient top glowing laser accent -->
+            <div class="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-brand-orange to-transparent opacity-75 pointer-events-none"></div>
+
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-shadow rounded">
-                <span class="text-2xl font-black font-heading tracking-wider text-brand-orange group-hover:text-white transition-colors">
-                    TASMANIA<span class="text-white group-hover:text-brand-orange">FILMS</span>
-                </span>
+            <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 focus:ring-offset-brand-shadow rounded-full">
+                <!-- Glowing Shutter / Film Reel Icon -->
+                <div class="relative w-9 h-9 rounded-xl bg-gradient-to-br from-brand-orange via-orange-600 to-amber-700 p-[1px] shadow-[0_0_15px_rgba(255,98,0,0.35)] group-hover:shadow-[0_0_25px_rgba(255,98,0,0.65)] transition-all duration-300 flex items-center justify-center">
+                    <div class="w-full h-full bg-[#121214] rounded-[11px] flex items-center justify-center">
+                        <i class="fa-solid fa-clapperboard text-brand-orange text-xs group-hover:rotate-12 transition-transform duration-300"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg font-black font-heading tracking-wider text-white group-hover:text-brand-orange transition-colors">TASMANIA</span>
+                        <span class="text-[10px] font-mono font-bold text-brand-orange bg-brand-orange/15 border border-brand-orange/30 px-1.5 py-0.2 rounded tracking-widest">FILMS</span>
+                    </div>
+                    <span class="text-[9px] font-mono tracking-widest text-zinc-400 uppercase -mt-0.5 flex items-center gap-1.5">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                        </span>
+                        STUDIO LIVE // BOGOTÁ
+                    </span>
+                </div>
             </a>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex items-center gap-7">
-                <a href="#inicio" class="text-sm font-medium hover:text-brand-orange transition-colors">Inicio</a>
-                <a href="#nosotros" class="text-sm font-medium hover:text-brand-orange transition-colors">Nosotros</a>
-                <a href="#servicios" class="text-sm font-medium hover:text-brand-orange transition-colors">Servicios</a>
-                <a href="#portafolio" class="text-sm font-medium hover:text-brand-orange transition-colors">Historias & Rodajes</a>
-                <a href="#colaboraciones" class="text-sm font-medium hover:text-brand-orange transition-colors">Colaboraciones</a>
-                <a href="#cotizador" class="text-sm font-medium hover:text-brand-orange transition-colors">Cotizador</a>
-                <a href="#plus" class="text-sm font-medium hover:text-brand-orange transition-colors">Diferencial</a>
-                <a href="presentacion.html" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors border border-brand-orange/40 bg-brand-orange/10 px-3 py-1 rounded-full"><i class="fa-solid fa-cube text-xs mr-1"></i> Presentación 3D</a>
-                <a href="filmina_presentacion.html" class="text-sm font-semibold text-brand-orange hover:text-white transition-colors border border-brand-orange/40 bg-brand-orange/10 px-3 py-1 rounded-full"><i class="fa-solid fa-chalkboard-user text-xs mr-1"></i> Filmina Pitch</a>
-                
+            <!-- Desktop Menu (Futuristic HUD Dock) -->
+            <nav class="hidden lg:flex items-center gap-1 bg-white/[0.03] border border-white/5 p-1 rounded-full backdrop-blur-md">
+                <a href="#inicio" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Inicio</a>
+                <a href="#nosotros" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Nosotros</a>
+                <a href="#servicios" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-brand-orange hover:text-white px-3.5 py-1.5 rounded-full hover:bg-brand-orange/10 transition-all duration-200 flex items-center gap-1.5">
+                    Servicios
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-orange shadow-[0_0_8px_#FF6200] animate-pulse"></span>
+                </a>
+                <a href="#portafolio" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Historias & Rodajes</a>
+                <a href="#colaboraciones" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Colaboraciones</a>
+                <a href="#cotizador" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Cotizador</a>
+                <a href="#plus" class="nav-pill text-[11px] font-semibold uppercase tracking-wider text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-full hover:bg-white/[0.08] transition-all duration-200">Diferencial</a>
+            </nav>
+
+            <!-- Right Controls: Audio + Futuristic CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
                 <!-- Ambient Audio Equalizer Button -->
-                <button id="ambient-toggle" class="flex items-center justify-center gap-2 px-3 py-1.5 border border-brand-greyDark/50 rounded-full hover:border-brand-orange text-brand-greyLight hover:text-brand-orange transition-all text-xs font-semibold" title="Activar/Desactivar Música Ambiental">
-                    <span class="eq-bars flex items-end gap-[2px] h-3.5 w-3.5 pointer-events-none">
+                <button id="ambient-toggle" class="flex items-center justify-center gap-2 px-3 py-1.5 border border-white/10 bg-white/[0.04] hover:border-brand-orange/60 rounded-full text-zinc-300 hover:text-brand-orange transition-all text-xs font-mono group" title="Activar/Desactivar Música Ambiental">
+                    <span class="eq-bars flex items-end gap-[2px] h-3 w-3 pointer-events-none">
                         <span class="eq-bar w-[2px] h-full bg-current rounded-sm"></span>
                         <span class="eq-bar w-[2px] h-2/3 bg-current rounded-sm"></span>
                         <span class="eq-bar w-[2px] h-1/2 bg-current rounded-sm"></span>
                     </span>
-                    <span id="ambient-label">Audio</span>
+                    <span id="ambient-label" class="text-[10px] font-bold tracking-wider uppercase">AUDIO</span>
                 </button>
 
-                <a href="#contacto" class="px-4 py-2 text-sm font-semibold bg-brand-orange text-white rounded hover:bg-white hover:text-brand-shadow transition-all duration-300">Contacto</a>
-            </nav>
+                <!-- Futuristic Neon CTA -->
+                <a href="#contacto" class="relative group overflow-hidden px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider text-black bg-gradient-to-r from-brand-orange via-amber-400 to-brand-orange shadow-[0_0_20px_rgba(255,98,0,0.35)] hover:shadow-[0_0_30px_rgba(255,98,0,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2">
+                    <span>Rodar Proyecto</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="md:hidden text-white hover:text-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange rounded p-1" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
-                <i class="fa-solid fa-bars text-2xl"></i>
+            <button class="lg:hidden text-white hover:text-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange rounded-lg p-2 bg-white/5 border border-white/10" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
         <!-- Mobile Drawer Navigation -->
-        <div class="hidden mobile-drawer fixed inset-y-0 right-0 w-80 bg-brand-shadow border-l border-brand-greyDark/50 shadow-2xl z-50 flex flex-col p-8 transition-transform transform translate-x-full duration-300 md:hidden" id="mobile-menu">
-            <div class="flex justify-between items-center mb-10">
-                <span class="text-xl font-black font-heading text-brand-orange">TASMANIA</span>
-                <button class="text-brand-greyLight hover:text-brand-orange focus:outline-none" id="menu-close" aria-label="Cerrar menú de navegación">
-                    <i class="fa-solid fa-xmark text-2xl"></i>
+        <div class="hidden mobile-drawer fixed inset-y-0 right-0 w-80 bg-[#121214]/95 backdrop-blur-2xl border-l border-white/10 shadow-2xl z-50 flex flex-col p-6 transition-transform transform translate-x-full duration-300 lg:hidden" id="mobile-menu">
+            <div class="flex justify-between items-center mb-8 pb-4 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl font-black font-heading text-white">TASMANIA</span>
+                    <span class="text-xs font-mono font-bold text-brand-orange bg-brand-orange/15 border border-brand-orange/30 px-1.5 py-0.5 rounded">FILMS</span>
+                </div>
+                <button class="text-zinc-400 hover:text-brand-orange focus:outline-none w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center border border-white/10" id="menu-close" aria-label="Cerrar menú de navegación">
+                    <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
-            <nav class="flex flex-col gap-6 text-lg font-medium">
-                <a href="#inicio" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Inicio</a>
-                <a href="#nosotros" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Nosotros</a>
-                <a href="#servicios" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Servicios</a>
-                <a href="#portafolio" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Historias & Rodajes</a>
-                <a href="#colaboraciones" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Colaboraciones</a>
-                <a href="#cotizador" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Cotizador</a>
-                <a href="#plus" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20">Diferencial</a>
-                <a href="presentacion.html" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20 text-brand-orange"><i class="fa-solid fa-cube text-xs mr-2"></i>Presentación 3D</a>
-                <a href="filmina_presentacion.html" class="hover:text-brand-orange transition-colors py-2 border-b border-brand-greyDark/20 text-brand-orange"><i class="fa-solid fa-chalkboard-user text-xs mr-2"></i>Filmina Pitch</a>
-                <a href="#contacto" class="mt-4 px-6 py-3 text-center text-sm font-semibold bg-brand-orange text-white rounded hover:bg-white hover:text-brand-shadow transition-all duration-300">Contacto</a>
+            
+            <div class="mb-4 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/5 flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                <span class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    SET EN VIVO
+                </span>
+                <span class="text-brand-orange font-bold">BOGOTÁ D.C.</span>
+            </div>
+
+            <nav class="flex flex-col gap-2 text-sm font-medium">
+                <a href="#inicio" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Inicio</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
+                <a href="#nosotros" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Nosotros</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
+                <a href="#servicios" class="text-brand-orange hover:bg-brand-orange/10 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between font-bold">
+                    <span class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
+                        Servicios
+                    </span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-brand-orange"></i>
+                </a>
+                <a href="#portafolio" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Historias & Rodajes</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
+                <a href="#colaboraciones" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Colaboraciones</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
+                <a href="#cotizador" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Cotizador Interactivo</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
+                <a href="#plus" class="hover:text-brand-orange hover:bg-white/5 px-3 py-2.5 rounded-lg transition-colors border-b border-white/5 flex items-center justify-between">
+                    <span>Diferencial</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-zinc-500"></i>
+                </a>
             </nav>
+
+            <div class="mt-auto pt-6 border-t border-white/10 flex flex-col gap-3">
+                <a href="#contacto" class="w-full py-3 text-center text-xs font-black uppercase tracking-wider bg-gradient-to-r from-brand-orange to-amber-500 text-black rounded-xl shadow-lg hover:brightness-110 transition-all">
+                    Iniciar Rodaje / Contacto
+                </a>
+            </div>
         </div>
         <!-- Drawer Backdrop Overlay -->
-        <div class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden" id="menu-backdrop"></div>
+        <div class="hidden fixed inset-0 bg-black/75 backdrop-blur-md z-40 lg:hidden" id="menu-backdrop"></div>
     </header>
 
     <main class="w-full pt-16">
@@ -425,244 +491,752 @@
         </section>
 
 
-                <!-- Services Section ("Nuestros Servicios") -->
+                <!-- Services Section ("Nuestros Servicios" - Enhanced Visual & Comprehensive Cinema Showcase) -->
         <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto relative">
-            <div class="absolute bottom-0 right-0 w-80 h-80 bg-brand-orange/5 rounded-full filter blur-[120px] pointer-events-none -z-10"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-orange/10 rounded-full filter blur-[140px] pointer-events-none -z-10"></div>
+            <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-amber-500/5 rounded-full filter blur-[120px] pointer-events-none -z-10"></div>
             
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
-                    Portafolio Integral de Soluciones
-                </span>
-                <h2 class="text-3xl sm:text-5xl font-black font-heading mt-2 mb-6 leading-tight text-wrap-balance">
-                    NUESTROS SERVICIOS
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-brand-orange bg-brand-orange/10 border border-brand-orange/30 px-4 py-1.5 rounded-full mb-4 shadow-[0_0_15px_rgba(255,98,0,0.15)]">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                    CATÁLOGO CINEMATOGRÁFICO // PRODUCCIÓN PROFESIONAL
+                </div>
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading mt-2 mb-6 leading-tight text-white">
+                    NUESTROS <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-amber-400 to-orange-500">SERVICIOS</span>
                 </h2>
-                <p class="text-brand-greyLight text-base sm:text-lg leading-relaxed text-wrap-pretty">
-                    Cubrimos todas las fases del ciclo audiovisual combinando narrativa de autor, tecnología de cine y acompañamiento transparente para artistas, marcas y empresas.
+                <p class="text-zinc-300 text-base sm:text-lg leading-relaxed text-wrap-pretty">
+                    Cubrimos todas las fases del ciclo audiovisual combinando narrativa de autor, óptica de cine, iluminación dramática y postproducción de alta gama para artistas, marcas y empresas en Bogotá y toda Colombia.
                 </p>
             </div>
 
-            <!-- Grid of 6 Detailed Services -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-                
-                <!-- Service 1: Videoclips -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-music"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-01 • FLAGSHIP
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Videoclips Musicales</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Transformamos la propuesta artística y musical en una experiencia visual contundente. Diseñamos la narrativa visual, dirección de arte, coreografía, rodaje multicámara y postproducción con estética de cine.
-                        </p>
-                        
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Master 4K DCI en ProRes 422HQ y H.264</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> 3 Píldoras en formato vertical (9:16) para TikTok/Reels</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Color Grading DaVinci Resolve con LUT cinematográfica</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Fotografías Behind The Scenes (BTS) en alta calidad</li>
-                            </ul>
-                        </div>
+            <!-- Cinema Standards & Production Guarantees Bar (Futuristic Cyber HUD Strip) -->
+            <div class="bg-gradient-to-r from-black/80 via-white/[0.03] to-black/80 border border-white/10 rounded-2xl p-4 sm:p-6 mb-14 backdrop-blur-xl shadow-2xl">
+                <div class="text-center mb-4">
+                    <span class="text-[11px] font-mono tracking-widest uppercase text-brand-orange font-bold">
+                        <i class="fa-solid fa-shield-halved mr-1"></i> Estándares Técnicos Garantizados en Cada Producción
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-3 bg-white/[0.02] border border-white/5 rounded-xl hover:border-brand-orange/40 transition-colors">
+                        <div class="text-brand-orange text-lg mb-1"><i class="fa-solid fa-video"></i></div>
+                        <div class="text-xs font-bold text-white uppercase font-mono">4K DCI & 6K RAW</div>
+                        <div class="text-[11px] text-zinc-400 mt-0.5">Sensores Super 35 / Full-Frame</div>
                     </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 7-12 días</span>
-                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Cotizar Videoclip <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+                    <div class="p-3 bg-white/[0.02] border border-white/5 rounded-xl hover:border-brand-orange/40 transition-colors">
+                        <div class="text-brand-orange text-lg mb-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="text-xs font-bold text-white uppercase font-mono">Color DaVinci Studio</div>
+                        <div class="text-[11px] text-zinc-400 mt-0.5">Etalonaje & LUTs Cinematográficas</div>
+                    </div>
+                    <div class="p-3 bg-white/[0.02] border border-white/5 rounded-xl hover:border-brand-orange/40 transition-colors">
+                        <div class="text-brand-orange text-lg mb-1"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <div class="text-xs font-bold text-white uppercase font-mono">Audio 32-Bit Float</div>
+                        <div class="text-[11px] text-zinc-400 mt-0.5">Cero distorsión en diálogos y set</div>
+                    </div>
+                    <div class="p-3 bg-white/[0.02] border border-white/5 rounded-xl hover:border-brand-orange/40 transition-colors">
+                        <div class="text-brand-orange text-lg mb-1"><i class="fa-solid fa-file-contract"></i></div>
+                        <div class="text-xs font-bold text-white uppercase font-mono">Derechos Comerciales</div>
+                        <div class="text-[11px] text-zinc-400 mt-0.5">Cesión legal y música licenciada</div>
                     </div>
                 </div>
-
-                <!-- Service 2: Video Corporativo -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-02 • B2B
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Video Corporativo</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Comunica la solidez, cultura e impacto de tu empresa con elegancia cinematográfica. Desarrollamos videos institucionales, testimoniales de clientes, casos de éxito y contenido de comunicación estratégica interna y externa.
-                        </p>
-
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Video institucional máster (2 a 4 minutos)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Cápsulas testimoniales cortas para LinkedIn / Web</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Microfonía inalámbrica de alta fidelidad 32-bit</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtitulado accesible en español e inglés</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 5-8 días</span>
-                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Cotizar Corporativo <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service 3: Fotografía Profesional -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-camera-retro"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-03 • HIGH RES
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Fotografía de Marca</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Capturamos la esencia visual de tu marca o perfil artístico con fotografía publicitaria, retrato editorial, producto y cobertura de set. Cuidamos iluminación, texturas y dirección de modelos al máximo nivel.
-                        </p>
-
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Galería seleccionada en alta resolución (Full-Frame)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Retoque editorial y etalonaje digital en Photoshop</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Archivos adaptados para imprenta y social media</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Licencia de uso comercial sin restricciones</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega: 3-5 días</span>
-                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Cotizar Fotografía <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service 4: Marketing Digital -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-share-nodes"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-04 • PERFORMANCE
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Marketing & Contenido Digital</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Producción de piezas audiovisuales pensadas específicamente para frenar el scroll y generar interacción real. Diseñamos formatos dinámicos para Instagram, TikTok y YouTube Shorts con ganchos visuales probados.
-                        </p>
-
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Paquetes mensuales de Reels/TikToks dinámicos</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Estructura de guion con gancho en los primeros 3 segundos</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtítulos dinámicos de alta retención integrados</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Asesoría de publicación y tendencias de audio</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Planes Mensuales / Por Proyecto</span>
-                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Impulsar Redes <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service 5: Cubrimiento de Eventos -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-calendar-check"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-05 • LIVE CINE
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Cubrimiento de Eventos</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Registramos la adrenalina y los momentos más emotivos de conciertos, conferencias, festivales culturales y activaciones de marca, sin interferir con la experiencia del público pero capturándolo todo.
-                        </p>
-
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Aftermovie cinematográfico principal (1 a 3 minutos)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Corte express de 30-60s para redes en menos de 24 horas</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Registro de audio directo de ponencias y ambiente</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Cobertura fotográfica de asistentes y escenografía</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Entrega Express: 24h a 4 días</span>
-                        <a href="#cotizador" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Cotizar Evento <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service 6: Asesoría Audiovisual -->
-                <div class="service-card bg-brand-greyDark/10 border border-brand-greyDark/30 hover:border-brand-orange p-8 rounded-2xl transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 bg-brand-orange/10 border border-brand-orange/30 text-brand-orange flex items-center justify-center rounded-xl text-xl">
-                                <i class="fa-solid fa-compass"></i>
-                            </div>
-                            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded border border-brand-orange/20 font-bold">
-                                SRV-06 • STRATEGY
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-white">Asesoría & Consultoría</h3>
-                        <p class="text-brand-greyLight text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
-                            Acompañamiento integral para creadores, productores y empresas que buscan estructurar un proyecto audiovisual antes de rodar. Evaluamos viabilidad técnica, desglose presupuestal y refinamiento de guion.
-                        </p>
-
-                        <!-- Deliverables -->
-                        <div class="mb-6 border-t border-brand-greyDark/30 pt-4">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2">Entregables Clave:</span>
-                            <ul class="text-xs text-brand-greyLight space-y-1.5">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Dossier de producción y presupuesto desglosado</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Plan de rodaje técnico y orden de llamado optimizada</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Scouting de locaciones recomendadas en Bogotá</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Sesiones de consultoría 1 a 1 con la dirección</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-brand-greyDark/30 pt-4 flex items-center justify-between">
-                        <span class="text-[11px] text-brand-greyLight font-mono">Sesiones Presenciales / Virtuales</span>
-                        <a href="#contacto" class="text-xs font-bold text-brand-orange hover:text-white transition-colors flex items-center gap-1.5 group">
-                            Agendar Asesoría <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Production Methodology: The 4 Phases of Tasmania Films -->
+            <!-- Interactive Category Filter Bar -->
+            <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-14" id="services-filter-container">
+                <button type="button" class="service-filter-btn active text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-brand-orange bg-brand-orange text-black transition-all shadow-[0_0_15px_rgba(255,98,0,0.3)]" data-service-filter="all">
+                    Todos los Servicios (6)
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="music">
+                    <i class="fa-solid fa-music text-[10px] mr-1 text-brand-orange"></i> Videoclips & Música
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="corporate">
+                    <i class="fa-solid fa-building text-[10px] mr-1 text-brand-orange"></i> Corporativo & B2B
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="photo">
+                    <i class="fa-solid fa-camera-retro text-[10px] mr-1 text-brand-orange"></i> Fotografía Editorial
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="social">
+                    <i class="fa-solid fa-mobile-screen-button text-[10px] mr-1 text-brand-orange"></i> Contenido Vertical 9:16
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="events">
+                    <i class="fa-solid fa-calendar-check text-[10px] mr-1 text-brand-orange"></i> Eventos & Festivales
+                </button>
+                <button type="button" class="service-filter-btn text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 hover:text-white hover:border-brand-orange/50 transition-all" data-service-filter="consulting">
+                    <i class="fa-solid fa-compass text-[10px] mr-1 text-brand-orange"></i> Asesoría & Guion
+                </button>
+            </div>
+
+            <!-- Grid of 6 Detailed Services with High-End Imagery, Tech Specs, and Action CTAs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" id="services-grid">
+                
+                <!-- Service 1: Videoclips Musicales -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="music">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1000&auto=format&fit=crop&q=80" alt="Rodaje de Videoclips Musicales en Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-brand-orange text-black px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-music mr-1"></i> CINE MUSICAL
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    4K DCI • PRORES
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-01
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-stopwatch text-brand-orange"></i> Entrega: 7 - 12 días</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Bogotá & Región</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Videoclips Musicales & Live Sessions
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                Narrativa de autor, dirección de arte e identidad visual para artistas
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                Transformamos la visión sonora del artista en una experiencia cinematográfica contundente. No hacemos simples grabaciones de playback: construimos atmósferas, dirección de actores, iluminación dramática con luminarias RGBWW y montaje al compás exacto del beat.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-film text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Preproducción:</strong> Guion conceptual, storyboard cuadro a cuadro, casting y scouting en Bogotá.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Rodaje:</strong> Set con ópticas anamórficas de cine, gimbal DJI Ronin y monitoreo inalámbrico.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Postproducción:</strong> Montaje dinámico, corrección de color en DaVinci Resolve Studio y master 4K.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Cámara / Formato</div>
+                                    <div class="text-xs font-bold text-white">4K/6K Cinema Log</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Óptica / Lentes</div>
+                                    <div class="text-xs font-bold text-white">Cine Primes T2.0</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Iluminación</div>
+                                    <div class="text-xs font-bold text-white">Nanlite / Aputure RGB</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Masterización</div>
+                                    <div class="text-xs font-bold text-white">DaVinci 35mm LUTs</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Master 4K DCI en Apple ProRes 422HQ y H.264</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> 3 Píldoras verticales (9:16) con ganchos para TikTok & Reels</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Galería Behind The Scenes (BTS) de 25+ fotos editadas</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Póster / Carátula oficial en alta resolución para Spotify Canvas</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Ref. Artistas:</span>
+                                <span class="text-brand-orange font-semibold">ROHO • CALETO 13 • LION BIGMAO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#cotizador" data-quote-service="videoclip" class="quote-service-btn flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Cotizar Videoclip <i class="fa-solid fa-calculator ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20informaci%C3%B3n%20para%20un%20Videoclip%20Musical" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 2: Video Corporativo -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="corporate">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1000&auto=format&fit=crop&q=80" alt="Producción de Video Corporativo Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-amber-500 text-black px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-building mr-1"></i> B2B & EMPRESAS
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    AUDIO 32-BIT FLOAT
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-02
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-stopwatch text-brand-orange"></i> Entrega: 5 - 8 días</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Set Empresarial</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Video Corporativo & Brand Storytelling
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                Autoridad, testimonios reales y comunicación de alto impacto comercial
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                Eliminamos los videos institucionales monótonos. Desarrollamos piezas cinematográficas que conectan con inversionistas, clientes corporativos y talento humano: casos de éxito, testimonios con verdad y recorridos de procesos sin alterar la rutina operativa.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-briefcase text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Descubrimiento:</strong> Entrevistas a directivos, guion de valor y cronograma exacto minuto a minuto.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Filmación:</strong> Set limpio con teleprompter, iluminación suave de cine y microfonía lavalier invisible.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Postproducción:</strong> Motion graphics corporativos 2D/3D, subtítulos bilingües y licencia musical.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Resolución</div>
+                                    <div class="text-xs font-bold text-white">4K Ultra HD 10-bit</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Microfonía</div>
+                                    <div class="text-xs font-bold text-white">32-Bit Float Lavalier</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Formatos</div>
+                                    <div class="text-xs font-bold text-white">16:9 Web & 9:16 Social</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Licencias</div>
+                                    <div class="text-xs font-bold text-white">Música 100% Comercial</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Video institucional máster (2 a 4 minutos) en 4K</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> 3 Cápsulas cortas con testimonios clave para LinkedIn y Web</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Clean feed sin textos para presentaciones en eventos y ferias</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtítulos accesibles en español e inglés (.SRT e incrustados)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Aplicaciones:</span>
+                                <span class="text-brand-orange font-semibold">Institucional • Casos de Éxito • Inducción</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#cotizador" data-quote-service="corporativo" class="quote-service-btn flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Cotizar Corporativo <i class="fa-solid fa-calculator ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20informaci%C3%B3n%20para%20un%20Video%20Corporativo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 3: Fotografía Profesional -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="photo">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1000&auto=format&fit=crop&q=80" alt="Fotografía Publicitaria y Editorial Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-amber-600 text-white px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-camera mr-1"></i> ALTA RESOLUCIÓN
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    45MP+ FULL FRAME
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-03
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-stopwatch text-brand-orange"></i> Entrega: 3 - 5 días</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Estudio / Exterior</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Fotografía Publicitaria & Editorial
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                Nitidez quirúrgica, etalonaje de autor y dirección de arte en set
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                Cada fotografía se construye como una pieza autónoma. Sesiones en estudio o locación cuidando esquemas de luz estroboscópica de alta velocidad, dirección de modelos o producto, y un proceso de postproducción con separación de frecuencias y etalonaje en Photoshop y Capture One.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-camera-retro text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Pre-sesión:</strong> Moodboard estético, paleta cromática, referencias de iluminación y styling.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Sesión:</strong> Disparo conectado (tethering) a monitor calibrado para revisión en tiempo real.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Postproducción:</strong> Revelado RAW, retoque de piel editorial y exportación en múltiples resoluciones.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Sensor / Formato</div>
+                                    <div class="text-xs font-bold text-white">Full-Frame 45MP+</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Ópticas Prime</div>
+                                    <div class="text-xs font-bold text-white">f/1.2 & f/1.4 Art</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Iluminación</div>
+                                    <div class="text-xs font-bold text-white">Flashes Estudio HSS</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Licencia</div>
+                                    <div class="text-xs font-bold text-white">Uso Comercial Total</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Galería privada online para preselección inmediata</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> 20 a 50 fotografías seleccionadas con revelado digital de autor</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Retoque avanzado para vallas, e-commerce o portadas musicales</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Archivos en TIFF 16-bit de gran formato + JPEG optimizado web</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Especialidades:</span>
+                                <span class="text-brand-orange font-semibold">Producto • Retrato Editorial • Moda & Set</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#cotizador" data-quote-service="fotografia" class="quote-service-btn flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Cotizar Fotografía <i class="fa-solid fa-calculator ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20informaci%C3%B3n%20para%20Fotograf%C3%ADa%20Profesional" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 4: Marketing Digital -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="social">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?w=1000&auto=format&fit=crop&q=80" alt="Producción de Contenido Digital Vertical Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-orange-600 text-white px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-share-nodes mr-1"></i> PERFORMANCE & REDES
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    9:16 4K • 60FPS
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-04
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-brand-orange"></i> Retención 3s</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Planes Mensuales / Batch</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Marketing & Contenido Vertical Dinámico
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                Piezas audiovisuales para frenar el scroll y multiplicar la conversión
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                No improvisamos con un teléfono. Rodamos con cámaras de cine en orientación vertical nativa, diseñando ganchos magnéticos en los primeros 3 segundos, ritmo continuo, efectos de sonido (SFX) inmersivos y subtitulado dinámico de alta retención para TikTok, Reels y YouTube Shorts.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-mobile-screen text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Estrategia:</strong> Detección de tendencias, ganchos (pattern interrupts) y guiones con CTA claros.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Batch Shooting:</strong> Rodamos en 1 sola jornada mensual todo el stock de contenido del mes.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Edición Flash:</strong> Montaje de retención, efectos de sonido, grafismos y subtítulos dinámicos.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Ratio Nativo</div>
+                                    <div class="text-xs font-bold text-white">9:16 Vertical 4K</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Velocidad</div>
+                                    <div class="text-xs font-bold text-white">60fps & 120fps Slow</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Audio SFX</div>
+                                    <div class="text-xs font-bold text-white">Diseño Sonoro Pro</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Subtítulos</div>
+                                    <div class="text-xs font-bold text-white">Dinámicos Animados</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Paquetes de 8, 12 o 20 videos verticales terminados</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Copywriting sugerido con hashtags y llamados a la acción (CTA)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Subtítulos dinámicos integrados con diseño visual atractivo</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Asesoría continua sobre audios en tendencia y métricas</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Formatos:</span>
+                                <span class="text-brand-orange font-semibold">Instagram Reels • TikTok • Shorts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#cotizador" data-quote-service="marketing" class="quote-service-btn flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Impulsar Redes <i class="fa-solid fa-calculator ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20informaci%C3%B3n%20para%20Contenido%20Digital" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 5: Cubrimiento de Eventos -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="events">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1000&auto=format&fit=crop&q=80" alt="Cubrimiento Cinematográfico de Eventos y Festivales Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-amber-500 text-black px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-bullhorn mr-1"></i> EN VIVO & AFTERMOVIE
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    MULTI-CÁMARA CINE
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-05
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-brand-orange"></i> Teaser Express: 24h</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Master: 4 días</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Cubrimiento Cinematográfico de Eventos
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                La euforia de conciertos, festivales y lanzamientos convertida en cine
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                Registramos la adrenalina y los momentos culminantes de festivales de música, conferencias magistrales, exposiciones y activaciones de marca. Sin entorpecer la experiencia del público, capturamos tomas épicas de tarima, backstage y ambiente con audio de consola directo.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-ticket text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Planificación:</strong> Mapeo de agenda, cronograma de ponencias o artistas y zonas de grabación clave.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Cobertura:</strong> Multicámara con gimbals de estabilización, lentes zoom luminosos y audio master.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Entrega Flash:</strong> Primer reel resumen entregado en menos de 24 horas para viralizar el evento.</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Estabilización</div>
+                                    <div class="text-xs font-bold text-white">Gimbals DJI Ronin</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Audio Directo</div>
+                                    <div class="text-xs font-bold text-white">Consola XLR Estéreo</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Operadores</div>
+                                    <div class="text-xs font-bold text-white">1 a 3 Cámaras en Set</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Velocidad Flash</div>
+                                    <div class="text-xs font-bold text-white">Reel en &lt; 24 Horas</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Aftermovie cinematográfico principal (1 a 3 minutos)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Teaser vertical express de 30-60s para redes en menos de 24 horas</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Grabación íntegra de ponencias o shows musicales con sonido directo</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Pack de 50+ fotos editadas del evento para notas de prensa</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Eventos:</span>
+                                <span class="text-brand-orange font-semibold">Festivales • Conciertos • Ferias & Congresos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#cotizador" data-quote-service="eventos" class="quote-service-btn flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Cotizar Evento <i class="fa-solid fa-calculator ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20informaci%C3%B3n%20para%20Cubrimiento%20de%20un%20Evento" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Service 6: Asesoría Audiovisual -->
+                <article class="service-card group rounded-2xl overflow-hidden flex flex-col justify-between" data-service-category="consulting">
+                    <div>
+                        <!-- Service Photo Header with Cinema HUD Badges -->
+                        <div class="relative h-60 sm:h-64 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1000&auto=format&fit=crop&q=80" alt="Asesoría y Consultoría Audiovisual Tasmania Films" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#101012] via-[#101012]/30 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-wrap gap-2">
+                                <span class="text-[10px] font-mono uppercase tracking-wider font-bold bg-amber-600 text-white px-2.5 py-1 rounded shadow-md backdrop-blur-sm">
+                                    <i class="fa-solid fa-compass mr-1"></i> SCRIPT LAB & DIRECCIÓN
+                                </span>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-white bg-black/60 border border-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                                    PRODUCCIÓN EJECUTIVA
+                                </span>
+                            </div>
+                            <div class="absolute top-3.5 right-3.5">
+                                <span class="text-[10px] font-mono uppercase tracking-widest text-brand-orange bg-black/80 border border-brand-orange/40 px-2 py-1 rounded font-bold backdrop-blur-sm">
+                                    SRV-06
+                                </span>
+                            </div>
+
+                            <!-- Bottom Photo Overlay -->
+                            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-zinc-300">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-brand-orange"></i> Sesiones 1 a 1</span>
+                                <span class="bg-black/60 border border-white/10 px-2 py-0.5 rounded text-[10px] text-zinc-300">Presencial / Zoom HD</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 sm:p-7">
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-brand-orange transition-colors mb-2">
+                                Asesoría Audiovisual & Script Lab
+                            </h3>
+                            <p class="text-xs font-semibold text-brand-orange/90 uppercase tracking-wider mb-3">
+                                Planificación estratégica antes de rodar para evitar sobrecostos
+                            </p>
+                            <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-6 text-wrap-pretty">
+                                Un rodaje sin preproducción rigurosa cuesta millones. Auditamos tu proyecto antes de encender la primera cámara: desglosamos departamentos, afinamos el arco dramático de tu guion, calculamos presupuestos reales y te entregamos la hoja de ruta técnica completa.
+                            </p>
+
+                            <!-- 3-Phase Production Flow -->
+                            <div class="space-y-2 mb-6 bg-black/40 border border-white/5 p-3.5 rounded-xl">
+                                <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 block font-bold mb-2">
+                                    <i class="fa-solid fa-lightbulb text-brand-orange mr-1"></i> Fases del Servicio:
+                                </span>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">1.</span>
+                                    <span><strong>Diagnóstico:</strong> Análisis de guion técnico, viabilidad presupuestal y desglose por partidas.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">2.</span>
+                                    <span><strong>Estructuración:</strong> Plan de rodaje técnico, órdenes de llamado y scouting de locaciones en Bogotá.</span>
+                                </div>
+                                <div class="text-xs text-zinc-300 flex items-start gap-2">
+                                    <span class="text-brand-orange font-mono font-bold">3.</span>
+                                    <span><strong>Consultoría:</strong> Sesión 1 a 1 directa con nuestro Director y Director de Fotografía (DOP).</span>
+                                </div>
+                            </div>
+
+                            <!-- Tech Specs Grid (HUD Chips) -->
+                            <div class="grid grid-cols-2 gap-2 mb-6">
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Modalidad</div>
+                                    <div class="text-xs font-bold text-white">Presencial / Zoom HD</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Documentos</div>
+                                    <div class="text-xs font-bold text-white">Dossier & Plan Rodaje</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Locaciones</div>
+                                    <div class="text-xs font-bold text-white">Catálogo 40+ Bogotá</div>
+                                </div>
+                                <div class="bg-white/[0.03] border border-white/5 p-2 rounded-lg text-center">
+                                    <div class="text-[10px] font-mono text-zinc-400 uppercase">Acompañamiento</div>
+                                    <div class="text-xs font-bold text-white">Director & DOP Senior</div>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Checklist -->
+                            <div class="border-t border-white/10 pt-4 mb-4">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-white block mb-2.5">Entregables Master:</span>
+                                <ul class="text-xs text-zinc-300 space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Dossier de producción y desglose presupuestal por departamentos</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Plan de rodaje técnico y orden de llamado optimizada</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Scouting fotográfico de locaciones recomendadas con permisos viabilizados</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange text-[10px]"></i> Sesión de consultoría estratégica de 2 horas con minuta de acuerdos</li>
+                                </ul>
+                            </div>
+
+                            <!-- Reference Badge -->
+                            <div class="text-[11px] font-mono text-zinc-400 bg-white/[0.02] border border-white/5 p-2 rounded-lg flex items-center justify-between">
+                                <span>Dirigido a:</span>
+                                <span class="text-brand-orange font-semibold">Creadores • Agencias • Productoras</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Actions -->
+                    <div class="p-6 pt-0 border-t border-white/10 mt-4 flex items-center justify-between gap-3">
+                        <a href="#contacto" class="flex-1 text-center py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-orange text-black hover:bg-white hover:text-black transition-all duration-300 shadow-md">
+                            Agendar Asesoría <i class="fa-solid fa-calendar-days ml-1 text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/573100000000?text=Hola%20Tasmania%20Films,%20quiero%20agendar%20una%20Asesor%C3%ADa%20Audiovisual" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/50 hover:bg-emerald-950/40 text-emerald-400 flex items-center justify-center transition-all" title="Consultar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+<!-- Production Methodology: The 4 Phases of Tasmania Films -->
             <div class="bg-brand-shadow border border-brand-greyDark/40 p-8 sm:p-12 rounded-2xl relative overflow-hidden shadow-2xl">
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <span class="text-[11px] font-bold uppercase tracking-widest text-brand-orange block mb-2">Método de Trabajo Tasmania</span>
@@ -1046,7 +1620,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                         
                         <!-- 1 - ROHO (Jony Roy) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="2a84zgoJvxo">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="2a84zgoJvxo">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=80" alt="ROHO Live Session" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
@@ -1065,7 +1639,7 @@
                         </article>
 
                         <!-- 2 - CALETO 13 (Jony Roy) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="tLzvM1Pkf-g">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="tLzvM1Pkf-g">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="CALETO 13 Visualizer" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent pointer-events-none"></div>
@@ -1084,7 +1658,7 @@
                         </article>
 
                         <!-- 3 - Lion Bigmao -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="KbIMIE21ZnA">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="KbIMIE21ZnA">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=80" alt="Lion Bigmao Ready to Attack" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1103,7 +1677,7 @@
                         </article>
 
                         <!-- 4 - DONEXPRS (Mambo Rap) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zCjBs8S7wc8">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zCjBs8S7wc8">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop&q=80" alt="DONEXPRS Mambo Rap" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1122,7 +1696,7 @@
                         </article>
 
                         <!-- 5 - Audio Directo - Jery & Diken Mc -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="y2fiRb2AgRk">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="y2fiRb2AgRk">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Jery & Diken Mc" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1141,7 +1715,7 @@
                         </article>
 
                         <!-- 6 - Audio Directo - Nino Freestyle -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="r0m4sF9dSfk">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="live-session" data-video-id="r0m4sF9dSfk">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop&q=80" alt="Nino Freestyle" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1160,7 +1734,7 @@
                         </article>
 
                         <!-- 7 - Kiño Music -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="yYaLInLhZs0">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="yYaLInLhZs0">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&auto=format&fit=crop&q=80" alt="Kiño music" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1179,7 +1753,7 @@
                         </article>
 
                         <!-- 8 - Los de la piña (Cacao Records) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="VEGfiwVOF6M">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="VEGfiwVOF6M">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Los de la piña" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1198,7 +1772,7 @@
                         </article>
 
                         <!-- 9 - Sonora Extrema 1 -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="NvZvGf704oQ">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="NvZvGf704oQ">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&auto=format&fit=crop&q=80" alt="Sonora extrema" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1217,7 +1791,7 @@
                         </article>
 
                         <!-- 10 - Sonora Extrema 2 -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="V3u9-IOy1Ys">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="V3u9-IOy1Ys">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&auto=format&fit=crop&q=80" alt="Sonora Extrema Tiempos Cambian" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1236,7 +1810,7 @@
                         </article>
 
                         <!-- 11 - Sonidosis 1 (Rock Ruiseñor) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zjTuIkgaIu0">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="zjTuIkgaIu0">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1487180142328-054b783fc471?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Rock Ruiseñor" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1255,7 +1829,7 @@
                         </article>
 
                         <!-- 12 - Sonidosis 2 (Venceremos) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="IDUv6Ilt-OI">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="videoclip" data-video-id="IDUv6Ilt-OI">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&auto=format&fit=crop&q=80" alt="Sonidosis Venceremos" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1274,7 +1848,7 @@
                         </article>
 
                         <!-- 13 - Afaz Natural (Instagram) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DZyVpw6NkdZ/">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DZyVpw6NkdZ/">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=80" alt="Afaz Natural" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1293,7 +1867,7 @@
                         </article>
 
                         <!-- 14 - Bendito Vice (Instagram 1) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DXuaPV3EVt_/">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/DXuaPV3EVt_/">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&auto=format&fit=crop&q=80" alt="Bendito Vice Afro Vice" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1312,7 +1886,7 @@
                         </article>
 
                         <!-- 15 - Eminence (Instagram) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/Dbn3H08REYy/">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/reel/Dbn3H08REYy/">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80" alt="Eminence Luiste La Voz" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>
@@ -1331,7 +1905,7 @@
                         </article>
 
                         <!-- 16 - FMS Colombia (Instagram) -->
-                        <article class="portfolio-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/p/DXXIz8PkbCO/">
+                        <article class="portfolio-item show-item group relative overflow-hidden bg-brand-shadow rounded-xl border border-brand-greyDark/30 cursor-pointer hover:border-brand-orange transition-all duration-300" data-category="reel" data-instagram-url="https://www.instagram.com/p/DXXIz8PkbCO/">
                             <div class="aspect-video relative overflow-hidden bg-black flex items-center justify-center">
                                 <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80" alt="FMS Colombia" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-brand-shadow via-transparent to-transparent"></div>

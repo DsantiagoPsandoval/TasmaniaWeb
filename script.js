@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* --- 3. Scroll Reveal Fallback Strategy --- */
-    const animatedElements = document.querySelectorAll('.timeline-item, .service-card, .portfolio-item');
+    const animatedElements = document.querySelectorAll('.timeline-item');
     animatedElements.forEach(el => el.classList.add('reveal-on-scroll'));
 
     if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
@@ -86,6 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+    // Ensure all portfolio items are immediately visible on initial page load
+    portfolioItems.forEach(item => {
+        item.classList.remove('hidden-item');
+        item.classList.add('show-item');
+    });
+
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => {
@@ -109,6 +115,57 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.classList.add('hidden-item');
                 }
             });
+        });
+    });
+
+    /* --- 4b. Services Category Filtering & Direct Quote Preselection --- */
+    const serviceFilterBtns = document.querySelectorAll('.service-filter-btn');
+    const serviceCards = document.querySelectorAll('#services-grid .service-card');
+
+    if (serviceFilterBtns.length && serviceCards.length) {
+        serviceFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                serviceFilterBtns.forEach(b => {
+                    b.classList.remove('active', 'border-brand-orange', 'bg-brand-orange', 'text-black', 'shadow-[0_0_15px_rgba(255,98,0,0.3)]');
+                    b.classList.add('border-white/10', 'bg-white/[0.03]', 'text-zinc-400');
+                });
+
+                btn.classList.add('active', 'border-brand-orange', 'bg-brand-orange', 'text-black', 'shadow-[0_0_15px_rgba(255,98,0,0.3)]');
+                btn.classList.remove('border-white/10', 'bg-white/[0.03]', 'text-zinc-400');
+
+                const filterVal = btn.getAttribute('data-service-filter');
+
+                serviceCards.forEach(card => {
+                    const cardCat = card.getAttribute('data-service-category');
+                    if (filterVal === 'all' || cardCat === filterVal) {
+                        card.classList.remove('hidden-service');
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(15px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.classList.add('hidden-service');
+                    }
+                });
+            });
+        });
+    }
+
+    // Direct quote button listener on service cards
+    const quoteServiceBtns = document.querySelectorAll('.quote-service-btn');
+    quoteServiceBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetService = btn.getAttribute('data-quote-service');
+            if (targetService) {
+                const matchingRadio = document.querySelector('input[name="calc-service"][value="' + targetService + '"]');
+                if (matchingRadio) {
+                    matchingRadio.checked = true;
+                    matchingRadio.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+            }
         });
     });
 
